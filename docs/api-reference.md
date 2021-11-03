@@ -53,9 +53,9 @@ Callback function invoked right after the widget is rendered. This callback is n
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		// place your code here
-	}
+    onLoad : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -64,9 +64,9 @@ Callback function invoked when the page status changes. The function will receiv
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onStatusChange : function (status) {
-		// place your code here
-	}
+    onStatusChange : function (status) {
+        // place your code here
+    }
 });
 ```
 
@@ -75,9 +75,9 @@ Callback function invoked right when Tawk_API is ready to be used and before the
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onBeforeLoad : function () {
-		// place your code here
-	}
+    onBeforeLoad : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -86,9 +86,9 @@ Callback function invoked when the widget is maximized. This callback is not sup
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatMaximized : function () {
-		// place your code here
-	}
+    onChatMaximized : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -97,9 +97,9 @@ Callback function invoked when the widget is minimized. This callback is not sup
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatMinimized : function () {
-		// place your code here
-	}
+    onChatMinimized : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -108,9 +108,9 @@ Callback function invoked when the widget is hidden. This callback is not suppor
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatHidden : function () {
-		// place your code here
-	}
+    onChatHidden : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -119,9 +119,9 @@ Callback function invoked when the widget is started.
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatStarted : function () {
-		// place your code here
-	}
+    onChatStarted : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -130,9 +130,9 @@ Callback function invoked when the widget is ended. This callback is not support
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatEnded : function () {
-		// place your code here
-	}
+    onChatEnded : function () {
+        // place your code here
+    }
 });
 ```
 
@@ -141,9 +141,9 @@ Callback function invoked when the Pre-Chat Form is submitted. The submitted for
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onPrechatSubmit : function (data) {
-		// place your code here
-	}
+    onPrechatSubmit : function (data) {
+        // place your code here
+    }
 });
 ```
 
@@ -152,9 +152,9 @@ Callback function invoked when the Offline form is submitted. The submitted form
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onOfflineSubmit : function (data) {
-		// place your code here
-	}
+    onOfflineSubmit : function (data) {
+        // place your code here
+    }
 });
 ```
 
@@ -163,9 +163,9 @@ Callback function invoked when message is sent by the visitor. The message is pa
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onOfflineSubmit : function (message) {
-		// place your code here
-	}
+    onOfflineSubmit : function (message) {
+        // place your code here
+    }
 });
 ```
 
@@ -174,9 +174,9 @@ Callback function invoked when message is sent by the agent. The message is pass
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatMessageAgent : function (message) {
-		// place your code here
-	}
+    onChatMessageAgent : function (message) {
+        // place your code here
+    }
 });
 ```
 
@@ -185,9 +185,9 @@ Callback function invoked when message is sent by the system. The message is pas
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatMessageSystem : function (message) {
-		// place your code here
-	}
+    onChatMessageSystem : function (message) {
+        // place your code here
+    }
 });
 ```
 
@@ -196,9 +196,9 @@ Callback function invoked when an agent joins the chat. The data is passed to th
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onAgentJoinChat : function (data) {
-		// place your code here
-	}
+    onAgentJoinChat : function (data) {
+        // place your code here
+    }
 });
 ```
 
@@ -207,9 +207,9 @@ Callback function invoked when an agent leaves the chat. The data is passed to t
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onAgentLeaveChat : function (data) {
-		// place your code here
-	}
+    onAgentLeaveChat : function (data) {
+        // place your code here
+    }
 });
 ```
 
@@ -218,9 +218,9 @@ Callback function invoked when an agent leaves the chat. The satisfaction is pas
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onChatSatisfaction : function (satisfaction) {
-		// place your code here
-	}
+    onChatSatisfaction : function (satisfaction) {
+        // place your code here
+    }
 });
 ```
 
@@ -229,9 +229,9 @@ Callback function invoked when the visitor manually changes his name. The visito
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onVisitorNameChanged : function (visitorName) {
-		// place your code here
-	}
+    onVisitorNameChanged : function (visitorName) {
+        // place your code here
+    }
 });
 ```
 
@@ -240,9 +240,9 @@ Callback function invoked when a file is uploaded. The link to the uploaded file
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onFileUpload : function (link) {
-		// place your code here
-	}
+    onFileUpload : function (link) {
+        // place your code here
+    }
 });
 ```
 
@@ -251,9 +251,9 @@ Callback function invoked when a tag is updated.
 
 ```js
 Vue.use(TawkMessengerVue, {
-	onTagsUpdated : function (data) {
-		// place your code here
-	}
+    onTagsUpdated : function (data) {
+        // place your code here
+    }
 });
 ```
 
@@ -266,10 +266,10 @@ If the name and email will not be available on load time (eg single page app, aj
 
 ```js
 Vue.use(TawkMessengerVue, {
-	visitor : {
-		name : 'Name',
-		email : 'email@email.com'
-	}
+    visitor : {
+        name : 'Name',
+        email : 'email@email.com'
+    }
 });
 ```
 
@@ -282,9 +282,9 @@ $tawkMessengerVue.maximize();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.maximize();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.maximize();
+    }
 });
 ```
 
@@ -297,9 +297,9 @@ $tawkMessengerVue.minimize();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.minimize();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.minimize();
+    }
 });
 ```
 
@@ -312,9 +312,9 @@ $tawkMessengerVue.toggle();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.toggle();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.toggle();
+    }
 });
 ```
 
@@ -327,9 +327,9 @@ $tawkMessengerVue.popup();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.popup();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.popup();
+    }
 });
 ```
 
@@ -342,13 +342,13 @@ $tawkMessengerVue.getWindowType();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		if ($tawkMessengerVue.getWindowType() === 'inline') {
-			// do something if it's inline
-		} else {
-			// do something if it's embed
-		}
-	}
+    onLoad : function () {
+        if ($tawkMessengerVue.getWindowType() === 'inline') {
+            // do something if it's inline
+        } else {
+            // do something if it's embed
+        }
+    }
 });
 ```
 
@@ -361,9 +361,9 @@ $tawkMessengerVue.showWidget();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.showWidget();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.showWidget();
+    }
 });
 ```
 
@@ -376,9 +376,9 @@ $tawkMessengerVue.hideWidget();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.hideWidget();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.hideWidget();
+    }
 });
 ```
 
@@ -392,9 +392,9 @@ $tawkMessengerVue.toggleVisibility();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.toggleVisibility();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.toggleVisibility();
+    }
 });
 ```
 
@@ -407,17 +407,17 @@ $tawkMessengerVue.getStatus();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		const pageStatus = $tawkMessengerVue.getStatus();
+    onLoad : function () {
+        const pageStatus = $tawkMessengerVue.getStatus();
 
-		if (pageStatus === 'online') {
-			// do something for online
-		} else if (pageStatus === 'away') {
-			// do something for away
-		} else {
-			// do something for offline
-		}
-	}
+        if (pageStatus === 'online') {
+            // do something for online
+        } else if (pageStatus === 'away') {
+            // do something for away
+        } else {
+            // do something for offline
+        }
+    }
 });
 ```
 
@@ -430,11 +430,11 @@ $tawkMessengerVue.isChatMaximized();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		if ($tawkMessengerVue.isChatMaximized()) {
-			// do something it it's maximized
-		}
-	}
+    onLoad : function () {
+        if ($tawkMessengerVue.isChatMaximized()) {
+            // do something it it's maximized
+        }
+    }
 });
 ```
 
@@ -447,11 +447,11 @@ $tawkMessengerVue.isChatMinimized();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		if ($tawkMessengerVue.isChatMinimized()) {
-			// do something if it's minimized
-		}
-	}
+    onLoad : function () {
+        if ($tawkMessengerVue.isChatMinimized()) {
+            // do something if it's minimized
+        }
+    }
 });
 ```
 
@@ -464,11 +464,11 @@ $tawkMessengerVue.isChatHidden();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		if ($tawkMessengerVue.isChatHidden()) {
-			// do something if chat widget is hidden
-		}
-	}
+    onLoad : function () {
+        if ($tawkMessengerVue.isChatHidden()) {
+            // do something if chat widget is hidden
+        }
+    }
 });
 ```
 
@@ -481,11 +481,11 @@ $tawkMessengerVue.isChatOngoing();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		if ($tawkMessengerVue.isChatOngoing()) {
-			// do something if there's ongoing chat
-		}
-	}
+    onLoad : function () {
+        if ($tawkMessengerVue.isChatOngoing()) {
+            // do something if there's ongoing chat
+        }
+    }
 });
 ```
 
@@ -498,11 +498,11 @@ $tawkMessengerVue.isVisitorEngaged();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		if ($tawkMessengerVue.isVisitorEngaged()) {
-			// do something if visitor engaged in chat
-		}
-	}
+    onLoad : function () {
+        if ($tawkMessengerVue.isVisitorEngaged()) {
+            // do something if visitor engaged in chat
+        }
+    }
 });
 ```
 
@@ -515,9 +515,9 @@ $tawkMessengerVue.endChat();
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.endChat();
-	}
+    onLoad : function () {
+        $tawkMessengerVue.endChat();
+    }
 });
 ```
 
@@ -554,28 +554,28 @@ $tawkMessengerVue.setAttributes(attributes, callback);
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.setAttributes({
-			id : 'A1234',
-			store : 'Midvalley'
-		}, function (error) {
-			// do something if error
-		});
-	}
+    onLoad : function () {
+        $tawkMessengerVue.setAttributes({
+            id : 'A1234',
+            store : 'Midvalley'
+        }, function (error) {
+            // do something if error
+        });
+    }
 });
 
 // Example for setting name and email
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.setAttributes({
-			name : 'Name',
-			email : 'email@email.com',
-			hash : 'hash value'
-		}, function (error) {
-			// do something if error
-		});
-	}
+    onLoad : function () {
+        $tawkMessengerVue.setAttributes({
+            name : 'Name',
+            email : 'email@email.com',
+            hash : 'hash value'
+        }, function (error) {
+            // do something if error
+        });
+    }
 });
 ```
 
@@ -595,26 +595,26 @@ $tawkMessengerVue.addEvent(eventName, metaData, callback);
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.addEvent(
-			'requested-quotation',
-			function (error) {
-				// do something if error
-			}
-		);
+    onLoad : function () {
+        $tawkMessengerVue.addEvent(
+            'requested-quotation',
+            function (error) {
+                // do something if error
+            }
+        );
 
-		$tawkMessengerVue.addEvent(
-			'product-add-to-cart',
-			{
-				sku : 'A0012',
-				name : 'Jeans',
-				price : '50'
-			},
-			function (error) {
-				// do something if error
-			}
-		);
-	}
+        $tawkMessengerVue.addEvent(
+            'product-add-to-cart',
+            {
+                sku : 'A0012',
+                name : 'Jeans',
+                price : '50'
+            },
+            function (error) {
+                // do something if error
+            }
+        );
+    }
 });
 ```
 
@@ -635,17 +635,17 @@ $tawkMessengerVue.addTags(tags, callback);
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.addTags(
-			[
-				'hello',
-				'world'
-			],
-			function (error) {
-				// do something if error
-			}
-		);
-	}
+    onLoad : function () {
+        $tawkMessengerVue.addTags(
+            [
+                'hello',
+                'world'
+            ],
+            function (error) {
+                // do something if error
+            }
+        );
+    }
 });
 ```
 
@@ -665,17 +665,17 @@ $tawkMessengerVue.removeTags(tags, callback);
 // Example
 
 Vue.use(TawkMessengerVue, {
-	onLoad : function () {
-		$tawkMessengerVue.removeTags(
-			[
-				'hello',
-				'world'
-			],
-			function (error) {
-				// do something if error
-			}
-		);
-	}
+    onLoad : function () {
+        $tawkMessengerVue.removeTags(
+            [
+                'hello',
+                'world'
+            ],
+            function (error) {
+                // do something if error
+            }
+        );
+    }
 });
 ```
 
@@ -694,11 +694,11 @@ $tawkMessengerVue.removeTags(tags, callback);
 // Example
 
 Vue.use(TawkMessengerVue, {
-	visitor : {
-		name : 'Name',
-		email : 'email@email.com',
-		hash : '<calculate-hash>'
-	}
+    visitor : {
+        name : 'Name',
+        email : 'email@email.com',
+        hash : '<calculate-hash>'
+    }
 });
 ```
 
@@ -707,28 +707,28 @@ Object used to update the widget styling. Currently only supports zIndex style. 
 
 ```js
 Vue.use(TawkMessengerVue, {
-	customStyle : {
-		zIndex : Integer|String
-	}
+    customStyle : {
+        zIndex : Integer|String
+    }
 });
 
 // Example
 
 Vue.use(TawkMessengerVue, {
-	customStyle : {
-		zIndex : 1000
-	}
+    customStyle : {
+        zIndex : 1000
+    }
 });
 
 Vue.use(TawkMessengerVue, {
-	customStyle : {
-		zIndex : '1000'
-	}
+    customStyle : {
+        zIndex : '1000'
+    }
 });
 
 Vue.use(TawkMessengerVue, {
-	customStyle : {
-		zIndex : '1000 !important'
-	}
+    customStyle : {
+        zIndex : '1000 !important'
+    }
 });
 ```
