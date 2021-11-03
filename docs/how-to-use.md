@@ -1,7 +1,5 @@
 # How to Use
 
-
-
 ## Import the plugin
 Go to your main file which is commonly located at **src/main.js** please add this code.
 
@@ -14,8 +12,8 @@ Add this code in your main file, the **propertyId** and **widgetId** will be fou
 
 ```js
 Vue.use(TawkMessengerVue, {
-	propertyId : 'property_id',
-	widgetId : 'widget_id'
+    propertyId : 'property_id',
+    widgetId : 'widget_id'
 });
 ```
 
@@ -24,12 +22,12 @@ You can see the documentation of [API reference](api-reference.md) here.
 
 ```js
 Vue.use(TawkMessengerVue, {
-	propertyId : 'property_id',
-	widgetId : 'widget_id',
+    propertyId : 'property_id',
+    widgetId : 'widget_id',
 
-	// Sample API
-	onLoad : function () {
-		// place your code here
-	}
+    // Sample API
+    onLoad : function () {
+        // place your code here
+    }
 });
 ```
