@@ -1,6 +1,6 @@
 let installed = false;
 
-const load = ({ propertyId, widgetName}, options) => {
+const load = ({ propertyId, widgetId}, options) => {
 	if (installed) {
 		return;
 	}
@@ -56,7 +56,7 @@ const load = ({ propertyId, widgetName}, options) => {
 	 */
 	const script = document.createElement('script');
 	script.async = true;
-	script.src = `https://embed.talk.lv/${propertyId}/${widgetName}`;
+	script.src = `https://embed.talk.lv/${propertyId}/${widgetId}`;
 	script.charset = 'UTF-8';
 	script.setAttribute('crossorigin', '*');
 
@@ -71,15 +71,15 @@ const install = (Vue, options = {}) => {
 		throw new Error('tawk-messenger-vue API "option.propertyId" is missing');
 	}
 
-	if (!options.widgetName || options.widgetName.length === 0) {
-		throw new Error('tawk-messenger-vue API "option.widgetName" is missing');
+	if (!options.widgetId || options.widgetId.length === 0) {
+		throw new Error('tawk-messenger-vue API "option.widgetId" is missing');
 	}
 
 	Vue.mixin({
 		mounted() {
 			load({
 				propertyId : options.propertyId,
-				widgetName : options.widgetName,
+				widgetId : options.widgetId,
 			},
 			options);
 		}

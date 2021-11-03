@@ -2,7 +2,7 @@
     <a href="https://www.tawk.to/"
     target="_blank"
     rel="noopener noreferrer">
-        <img width="150"
+        <img width="120"
             src="https://www.tawk.to/wp-content/uploads/2020/04/tawk-sitelogo.png"
             alt="Tawk logo">
     </a>
@@ -15,26 +15,17 @@
 > A plugin for Vue js framework of [tawk.to](https://www.tawk.to/) messenger.
 
 ## Getting Started
+The plugin is available in node package manager.
 ```bash
 # Add as dependency
-npm install tawk-messenger-vue
-```
-
-```js
-// Add in your main script at src/main.js
-import TawkMessengerVue from 'tawk-messenger-vue';
-
-Vue.use(TawkMessengerVue, {
-	propertyId : 'property_id',
-	widgetName : 'widget_name'
-});
+$ npm install tawk-messenger-vue
 ```
 
 ## Documentation
 
 This project includes a `docs` folder with more details on:
 1.  [How to Use](docs/how-to-use.md)
-1.  [Javascript API](https://developer.tawk.to/jsapi/)
+1.  [API Reference](docs/api-reference.md)
 
 ## Frequently Asked Questions
 
