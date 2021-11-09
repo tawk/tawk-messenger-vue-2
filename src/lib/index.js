@@ -78,25 +78,81 @@ class TawkMessenger {
 	 * inside of the widget
 	 */
 	mapListeners() {
-		window.Tawk_API.onLoad = () => this.root.$emit('onLoad');
-		window.Tawk_API.onStatusChange = (status) => this.root.$emit('onStatusChange', status);
-		window.Tawk_API.onBeforeLoad = () => this.root.$emit('onBeforeLoad');
-		window.Tawk_API.onChatMaximized = () => this.root.$emit('onChatMaximized');
-		window.Tawk_API.onChatMinimized = () => this.root.$emit('onChatMinimized');
-		window.Tawk_API.onChatHidden = () => this.root.$emit('onChatHidden');
-		window.Tawk_API.onChatStarted = () => this.root.$emit('onChatStarted');
-		window.Tawk_API.onChatEnded = () => this.root.$emit('onChatEnded');
-		window.Tawk_API.onPrechatSubmit = (data) => this.root.$emit('onPrechatSubmit', data);
-		window.Tawk_API.onOfflineSubmit = (data) => this.root.$emit('onOfflineSubmit', data);
-		window.Tawk_API.onChatMessageVisitor = (message) => this.root.$emit('onChatMessageVisitor', message);
-		window.Tawk_API.onChatMessageAgent = (message) => this.root.$emit('onChatMessageAgent', message);
-		window.Tawk_API.onChatMessageSystem = (message) => this.root.$emit('onChatMessageSystem', message);
-		window.Tawk_API.onAgentJoinChat = (data) => this.root.$emit('onAgentJoinChat', data);
-		window.Tawk_API.onAgentLeaveChat = (data) => this.root.$emit('onAgentLeaveChat', data);
-		window.Tawk_API.onChatSatisfaction = (satisfaction) => this.root.$emit('onChatSatisfaction', satisfaction);
-		window.Tawk_API.onVisitorNameChanged = (visitorName) => this.root.$emit('onVisitorNameChanged', visitorName);
-		window.Tawk_API.onFileUpload = (link) => this.root.$emit('onFileUpload', link);
-		window.Tawk_API.onTagsUpdated = (data) => this.root.$emit('onTagsUpdated', data);
+		window.addEventListener('tawkLoad', () => {
+			this.root.$emit('onLoad');
+		});
+
+		window.addEventListener('tawkStatusChange', (status) => {
+			this.root.$emit('onStatusChange', status.detail);
+		});
+
+		window.addEventListener('tawkBeforeLoad', () => {
+			this.root.$emit('onBeforeLoad');
+		});
+
+		window.addEventListener('tawkChatMaximized', () => {
+			this.root.$emit('onChatMaximized');
+		});
+
+		window.addEventListener('tawkChatMinimized', () => {
+			this.root.$emit('onChatMinimized');
+		});
+
+		window.addEventListener('tawkChatHidden', () => {
+			this.root.$emit('onChatHidden');
+		});
+
+		window.addEventListener('tawkChatStarted', () => {
+			this.root.$emit('onChatStarted');
+		});
+
+		window.addEventListener('tawkChatEnded', () => {
+			this.root.$emit('onChatEnded');
+		});
+
+		window.addEventListener('tawkPrechatSubmit', (data) => {
+			this.root.$emit('onPrechatSubmit', data.detail);
+		});
+
+		window.addEventListener('tawkOfflineSubmit', (data) => {
+			this.root.$emit('onOfflineSubmit', data.detail);
+		});
+		
+		window.addEventListener('tawkChatMessageVisitor', (message) => {
+			this.root.$emit('onChatMessageVisitor', message.detail);
+		});
+
+		window.addEventListener('tawkChatMessageAgent', (message) => {
+			this.root.$emit('onChatMessageAgent', message.detail);
+		});
+
+		window.addEventListener('tawkChatMessageSystem', (message) => {
+			this.root.$emit('onChatMessageSystem', message.detail);
+		});
+
+		window.addEventListener('tawkAgentJoinChat', (data) => {
+			this.root.$emit('onAgentJoinChat', data.detail);
+		});
+		
+		window.addEventListener('tawkAgentLeaveChat', (data) => {
+			this.root.$emit('onAgentLeaveChat', data.detail);
+		});
+
+		window.addEventListener('tawkChatSatisfaction', (satisfaction) => {
+			this.root.$emit('onChatSatisfaction', satisfaction.detail);
+		});
+		
+		window.addEventListener('tawkVisitorNameChanged', (visitorName) => {
+			this.root.$emit('onVisitorNameChanged', visitorName.detail);
+		});
+
+		window.addEventListener('tawkFileUpload', (link) => {
+			this.root.$emit('onFileUpload', link.detail);
+		});
+
+		window.addEventListener('tawkTagsUpdated', (data) => {
+			this.root.$emit('onTagsUpdated', data.detail);
+		});
 	}
 
 	/**
