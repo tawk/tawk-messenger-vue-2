@@ -24,10 +24,12 @@ You can see the documentation of [API reference](api-reference.md) here.
 Vue.use(TawkMessengerVue, {
     propertyId : 'property_id',
     widgetId : 'widget_id',
-
-    // Sample API
-    onLoad : function () {
-        // place your code here
-    }
 });
+
+// In your vue components you can call the $tawkMessenger globally
+this.$tawkMessenger.$on('onLoad', () => {
+    // place your code here
+});
+
+this.$tawkMessenger.toggle();
 ```
