@@ -66,25 +66,81 @@ const injectAPI = (root) => {
 	/**
 	 * Functions for callbacks that will be listened
 	 */
-	window.Tawk_API.onLoad = () => root.$emit('onLoad');
-	window.Tawk_API.onStatusChange = (status) => root.$emit('onStatusChange', status);
-	window.Tawk_API.onBeforeLoad = () => root.$emit('onBeforeLoad');
-	window.Tawk_API.onChatMaximized = () => root.$emit('onChatMaximized');
-	window.Tawk_API.onChatMinimized = () => root.$emit('onChatMinimized');
-	window.Tawk_API.onChatHidden = () => root.$emit('onChatHidden');
-	window.Tawk_API.onChatStarted = () => root.$emit('onChatStarted');
-	window.Tawk_API.onChatEnded = () => root.$emit('onChatEnded');
-	window.Tawk_API.onPrechatSubmit = (data) => root.$emit('onPrechatSubmit', data);
-	window.Tawk_API.onOfflineSubmit = (data) => root.$emit('onOfflineSubmit', data);
-	window.Tawk_API.onChatMessageVisitor = (message) => root.$emit('onChatMessageVisitor', message);
-	window.Tawk_API.onChatMessageAgent = (message) => root.$emit('onChatMessageAgent', message);
-	window.Tawk_API.onChatMessageSystem = (message) => root.$emit('onChatMessageSystem', message);
-	window.Tawk_API.onAgentJoinChat = (data) => root.$emit('onAgentJoinChat', data);
-	window.Tawk_API.onAgentLeaveChat = (data) => root.$emit('onAgentLeaveChat', data);
-	window.Tawk_API.onChatSatisfaction = (satisfaction) => root.$emit('onChatSatisfaction', satisfaction);
-	window.Tawk_API.onVisitorNameChanged = (visitorName) => root.$emit('onVisitorNameChanged', visitorName);
-	window.Tawk_API.onFileUpload = (link) => root.$emit('onFileUpload', link);
-	window.Tawk_API.onTagsUpdated = (data) => root.$emit('onTagsUpdated', data);
+	window.addEventListener('tawkLoad', () => {
+		root.$emit('onLoad');
+	});
+
+	window.addEventListener('tawkStatusChange', (status) => {
+		root.$emit('onStatusChange', status.detail);
+	});
+
+	window.addEventListener('tawkBeforeLoad', () => {
+		root.$emit('onBeforeLoad');
+	});
+
+	window.addEventListener('tawkChatMaximized', () => {
+		root.$emit('onChatMaximized');
+	});
+
+	window.addEventListener('tawkChatMinimized', () => {
+		root.$emit('onChatMinimized');
+	});
+
+	window.addEventListener('tawkChatHidden', () => {
+		root.$emit('onChatHidden');
+	});
+
+	window.addEventListener('tawkChatStarted', () => {
+		root.$emit('onChatStarted');
+	});
+
+	window.addEventListener('tawkChatEnded', () => {
+		root.$emit('onChatEnded');
+	});
+
+	window.addEventListener('tawkPrechatSubmit', (data) => {
+		root.$emit('onPrechatSubmit', data.detail);
+	});
+
+	window.addEventListener('tawkOfflineSubmit', (data) => {
+		root.$emit('onOfflineSubmit', data.detail);
+	});
+	
+	window.addEventListener('tawkChatMessageVisitor', (message) => {
+		root.$emit('onChatMessageVisitor', message.detail);
+	});
+
+	window.addEventListener('tawkChatMessageAgent', (message) => {
+		root.$emit('onChatMessageAgent', message.detail);
+	});
+
+	window.addEventListener('tawkChatMessageSystem', (message) => {
+		root.$emit('onChatMessageSystem', message.detail);
+	});
+
+	window.addEventListener('tawkAgentJoinChat', (data) => {
+		root.$emit('onAgentJoinChat', data.detail);
+	});
+	
+	window.addEventListener('tawkAgentLeaveChat', (data) => {
+		root.$emit('onAgentLeaveChat', data.detail);
+	});
+
+	window.addEventListener('tawkChatSatisfaction', (satisfaction) => {
+		root.$emit('onChatSatisfaction', satisfaction.detail);
+	});
+	
+	window.addEventListener('tawkVisitorNameChanged', (visitorName) => {
+		root.$emit('onVisitorNameChanged', visitorName.detail);
+	});
+
+	window.addEventListener('tawkFileUpload', (link) => {
+		root.$emit('onFileUpload', link.detail);
+	});
+
+	window.addEventListener('tawkTagsUpdated', (data) => {
+		root.$emit('onTagsUpdated', data.detail);
+	});
 
 
 	/**
