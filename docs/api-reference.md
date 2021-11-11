@@ -6,25 +6,25 @@ The API provides a flexible set of methods that can be used in your web projects
 Use the JavaScript API to manipulate the chat widget displayed on your website.
 
 ## Table of contents
-- [onLoad](#onload)
-- [onStatusChange](#onstatuschange)
-- [onBeforeLoad](#onbeforeload)
-- [onChatMaximized](#onchatmaximized)
-- [onChatMinimized](#onchatminimized)
-- [onChatHidden](#onchathidden)
-- [onChatStarted](#onchatstarted)
-- [onChatEnded](#onchatended)
-- [onPrechatSubmit](#onprechatsubmit)
-- [onOfflineSubmit](#onofflinesubmit)
-- [onChatMessageVisitor](#onchatmessagevisitor)
-- [onChatMessageAgent](#onchatmessageagent)
-- [onChatMessageSystem](#onchatmessagesystem)
-- [onAgentJoinChat](#onagentjoinchat)
-- [onAgentLeaveChat](#onagentleavechat)
-- [onChatSatisfaction](#onchatsatisfaction)
-- [onVisitorNameChanged](#onvisitornamechanged)
-- [onFileUpload](#onfileupload)
-- [onTagsUpdated](#ontagsupdated)
+- [load](#load)
+- [statusChange](#statuschange)
+- [beforeLoad](#beforeload)
+- [chatMaximized](#chatmaximized)
+- [chatMinimized](#chatminimized)
+- [chatHidden](#chathidden)
+- [chatStarted](#chatstarted)
+- [chatEnded](#chatended)
+- [prechatSubmit](#prechatsubmit)
+- [offlineSubmit](#offlinesubmit)
+- [chatMessageVisitor](#chatmessagevisitor)
+- [chatMessageAgent](#chatmessageagent)
+- [chatMessageSystem](#chatmessagesystem)
+- [agentJoinChat](#agentjoinchat)
+- [agentLeaveChat](#agentleavechat)
+- [chatSatisfaction](#chatsatisfaction)
+- [visitorNameChanged](#visitornamechanged)
+- [fileUpload](#fileupload)
+- [tagsUpdated](#tagsupdated)
 - [visitor](#visitor)
 - [maximize](#maximize)
 - [minimize](#minimize)
@@ -48,173 +48,173 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 - [secureMode](#securemode)
 - [customStyle](#customstyle)
 
-## onLoad
+## load
 Listen on event that invoked right after the widget is rendered. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     // place your code here
 });
 ```
 
-## onStatusChange
+## statusChange
 Listen on event that invoked when the page status changes. The function will receive the changed status which will be either online, away or offline. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onStatusChage', (status) => {
+this.$tawkMessenger.$on('statusChage', (status) => {
     // place your code here
 });
 ```
 
-## onBeforeLoad
+## beforeLoad
 Listen on event that invoked right when Tawk_API is ready to be used and before the widget is rendered. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onBeforeLoad', () => {
+this.$tawkMessenger.$on('beforeLoad', () => {
     // place your code here
 });
 ```
 
-## onChatMaximized
+## chatMaximized
 Listen on event that invoked when the widget is maximized. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatMaximized', () => {
+this.$tawkMessenger.$on('chatMaximized', () => {
     // place your code here
 })
 ```
 
-## onChatMinimized
+## chatMinimized
 Listen on event that invoked when the widget is minimized. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatMinimized', () => {
+this.$tawkMessenger.$on('chatMinimized', () => {
     // place your code here
 });
 ```
 
-## onChatHidden
+## chatHidden
 Listen on event that invoked when the widget is hidden. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatHidden', () => {
+this.$tawkMessenger.$on('chatHidden', () => {
     // place your code here
 });
 ```
 
-## onChatStarted
+## chatStarted
 Listen on event that invoked when the widget is started.
 
 ```js
-this.$tawkMessenger.$on('onChatStarted', () => {
+this.$tawkMessenger.$on('chatStarted', () => {
     // place your code here
 });
 ```
 
-## onChatEnded
+## chatEnded
 Listen on event that invoked when the widget is ended. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatEnded', () => {
+this.$tawkMessenger.$on('chatEnded', () => {
     // place your code here
 });
 ```
 
-## onPrechatSubmit
+## prechatSubmit
 Listen on event that invoked when the Pre-Chat Form is submitted. The submitted form data is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onPrechatSubmit', (data) => {
+this.$tawkMessenger.$on('prechatSubmit', (data) => {
     // place your code here
 });
 ```
 
-## onOfflineSubmit
+## offlineSubmit
 Listen on event that invoked when the Offline form is submitted. The submitted form data is passed to the function. Form data will contain {name : ”, email : ”, message : ”, questions : []}. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onOfflineSubmit', (data) => {
+this.$tawkMessenger.$on('offlineSubmit', (data) => {
     // place your code here
 });
 ```
 
-## onChatMessageVisitor
+## chatMessageVisitor
 Listen on event that invoked when message is sent by the visitor. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatMessageVisitor', (message) => {
+this.$tawkMessenger.$on('chatMessageVisitor', (message) => {
     // place your code here
 });
 ```
 
-## onChatMessageAgent
+## chatMessageAgent
 Listen on event that invoked when message is sent by the agent. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatMessageAgent', (message) => {
+this.$tawkMessenger.$on('chatMessageAgent', (message) => {
     // place your code here
 });
 ```
 
-## onChatMessageSystem
+## chatMessageSystem
 Listen on event that invoked when message is sent by the system. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatMessageSystem', (message) => {
+this.$tawkMessenger.$on('chatMessageSystem', (message) => {
     // place your code here
 });
 ```
 
-## onAgentJoinChat
+## agentJoinChat
 Listen on event that invoked when an agent joins the chat. The data is passed to the function. Will contain {name : ”, position : ”, image : ”, id : ”}. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onAgentJoinChat', (data) => {
+this.$tawkMessenger.$on('agentJoinChat', (data) => {
     // place your code here
 });
 ```
 
-## onAgentLeaveChat
+## agentLeaveChat
 Listen on event that invoked when an agent leaves the chat. The data is passed to the function. Will contain {name : ”, id : ”}. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onAgentLeaveChat', (data) => {
+this.$tawkMessenger.$on('agentLeaveChat', (data) => {
     // place your code here
 });
 ```
 
-## onChatSatisfaction
+## chatSatisfaction
 Listen on event that invoked when an agent leaves the chat. The satisfaction is passed to the function. -1 = dislike | 0 = neutral | 1 = like. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onChatSatisfaction', (satisfaction) => {
+this.$tawkMessenger.$on('chatSatisfaction', (satisfaction) => {
     // place your code here
 });
 ```
 
-## onVisitorNameChanged
+## visitorNameChanged
 Listen on event that invoked when the visitor manually changes his name. The visitorName is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onVisitorNameChanged', (visitorName) => {
+this.$tawkMessenger.$on('visitorNameChanged', (visitorName) => {
     // place your code here
 });
 ```
 
-## onFileUpload
+## fileUpload
 Listen on event that invoked when a file is uploaded. The link to the uploaded file is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.$on('onFileUpload', (link) => {
+this.$tawkMessenger.$on('fileUpload', (link) => {
     // place your code here
 });
 ```
 
-## onTagsUpdated
+## tagsUpdated
 Listen on event that invoked when a tag is updated.
 
 ```js
-this.$tawkMessenger.$on('onTagsUpdated', (data) => {
+this.$tawkMessenger.$on('tagsUpdated', (data) => {
     // place your code here
 });
 ```
@@ -241,7 +241,7 @@ this.$tawkMessenger.maximize();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.maximize();
 });
 ```
@@ -254,7 +254,7 @@ this.$tawkMessenger.minimize();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.minimize();
 });
 ```
@@ -267,7 +267,7 @@ this.$tawkMessenger.toggle();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.toggle();
 });
 ```
@@ -280,7 +280,7 @@ this.$tawkMessenger.popup();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.popup();
 });
 ```
@@ -293,7 +293,7 @@ this.$tawkMessenger.getWindowType();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.getWindowType() === 'inline') {
         // do something if it's inline
     } else {
@@ -310,7 +310,7 @@ this.$tawkMessenger.showWidget();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.showWidget();
 });
 ```
@@ -323,7 +323,7 @@ this.$tawkMessenger.hideWidget();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.hideWidget();
 });
 ```
@@ -337,7 +337,7 @@ this.$tawkMessenger.toggleVisibility();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.toggleVisibility();
 });
 ```
@@ -350,7 +350,7 @@ this.$tawkMessenger.getStatus();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     const pageStatus = this.$tawkMessenger.getStatus();
 
     if (pageStatus === 'online') {
@@ -371,7 +371,7 @@ this.$tawkMessenger.isChatMaximized();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.isChatMaximized()) {
         // do something it it's maximized
     }
@@ -386,7 +386,7 @@ this.$tawkMessenger.isChatMinimized();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.isChatMinimized()) {
         // do something if it's minimized
     }
@@ -401,7 +401,7 @@ this.$tawkMessenger.isChatHidden();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.isChatHidden()) {
         // do something if chat widget is hidden
     }
@@ -416,7 +416,7 @@ this.$tawkMessenger.isChatOngoing();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.isChatOngoing()) {
         // do something if there's ongoing chat
     }
@@ -431,7 +431,7 @@ this.$tawkMessenger.isVisitorEngaged();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.isVisitorEngaged()) {
         // do something if visitor engaged in chat
     }
@@ -446,7 +446,7 @@ this.$tawkMessenger.endChat();
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.endChat();
 });
 ```
@@ -483,7 +483,7 @@ this.$tawkMessenger.setAttributes(attributes, callback);
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.setAttributes({
             id : 'A1234',
             store : 'Midvalley'
@@ -494,7 +494,7 @@ this.$tawkMessenger.$on('onLoad', () => {
 
 // Example for setting name and email
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.setAttributes({
             name : 'Name',
             email : 'email@email.com',
@@ -520,7 +520,7 @@ this.$tawkMessenger.addEvent(eventName, metaData, callback);
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.addEvent(
         'requested-quotation',
         function(error) {
@@ -558,7 +558,7 @@ $tawkMessengerVue.addTags(tags, callback);
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.addTags(
         [
             'hello',
@@ -586,7 +586,7 @@ $tawkMessengerVue.removeTags(tags, callback);
 
 // Example
 
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.removeTags(
         [
             'hello',

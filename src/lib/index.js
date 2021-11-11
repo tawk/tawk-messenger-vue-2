@@ -79,79 +79,79 @@ class TawkMessenger {
 	 */
 	mapListeners() {
 		window.addEventListener('tawkLoad', () => {
-			this.root.$emit('onLoad');
+			this.root.$emit('load');
 		});
 
 		window.addEventListener('tawkStatusChange', (status) => {
-			this.root.$emit('onStatusChange', status.detail);
+			this.root.$emit('statusChange', status.detail);
 		});
 
 		window.addEventListener('tawkBeforeLoad', () => {
-			this.root.$emit('onBeforeLoad');
+			this.root.$emit('beforeLoad');
 		});
 
 		window.addEventListener('tawkChatMaximized', () => {
-			this.root.$emit('onChatMaximized');
+			this.root.$emit('chatMaximized');
 		});
 
 		window.addEventListener('tawkChatMinimized', () => {
-			this.root.$emit('onChatMinimized');
+			this.root.$emit('chatMinimized');
 		});
 
 		window.addEventListener('tawkChatHidden', () => {
-			this.root.$emit('onChatHidden');
+			this.root.$emit('chatHidden');
 		});
 
 		window.addEventListener('tawkChatStarted', () => {
-			this.root.$emit('onChatStarted');
+			this.root.$emit('chatStarted');
 		});
 
 		window.addEventListener('tawkChatEnded', () => {
-			this.root.$emit('onChatEnded');
+			this.root.$emit('chatEnded');
 		});
 
 		window.addEventListener('tawkPrechatSubmit', (data) => {
-			this.root.$emit('onPrechatSubmit', data.detail);
+			this.root.$emit('prechatSubmit', data.detail);
 		});
 
 		window.addEventListener('tawkOfflineSubmit', (data) => {
-			this.root.$emit('onOfflineSubmit', data.detail);
+			this.root.$emit('offlineSubmit', data.detail);
 		});
 		
 		window.addEventListener('tawkChatMessageVisitor', (message) => {
-			this.root.$emit('onChatMessageVisitor', message.detail);
+			this.root.$emit('chatMessageVisitor', message.detail);
 		});
 
 		window.addEventListener('tawkChatMessageAgent', (message) => {
-			this.root.$emit('onChatMessageAgent', message.detail);
+			this.root.$emit('chatMessageAgent', message.detail);
 		});
 
 		window.addEventListener('tawkChatMessageSystem', (message) => {
-			this.root.$emit('onChatMessageSystem', message.detail);
+			this.root.$emit('chatMessageSystem', message.detail);
 		});
 
 		window.addEventListener('tawkAgentJoinChat', (data) => {
-			this.root.$emit('onAgentJoinChat', data.detail);
+			this.root.$emit('agentJoinChat', data.detail);
 		});
 		
 		window.addEventListener('tawkAgentLeaveChat', (data) => {
-			this.root.$emit('onAgentLeaveChat', data.detail);
+			this.root.$emit('agentLeaveChat', data.detail);
 		});
 
 		window.addEventListener('tawkChatSatisfaction', (satisfaction) => {
-			this.root.$emit('onChatSatisfaction', satisfaction.detail);
+			this.root.$emit('chatSatisfaction', satisfaction.detail);
 		});
 		
 		window.addEventListener('tawkVisitorNameChanged', (visitorName) => {
-			this.root.$emit('onVisitorNameChanged', visitorName.detail);
+			this.root.$emit('visitorNameChanged', visitorName.detail);
 		});
 
 		window.addEventListener('tawkFileUpload', (link) => {
-			this.root.$emit('onFileUpload', link.detail);
+			this.root.$emit('fileUpload', link.detail);
 		});
 
 		window.addEventListener('tawkTagsUpdated', (data) => {
-			this.root.$emit('onTagsUpdated', data.detail);
+			this.root.$emit('tagsUpdated', data.detail);
 		});
 	}
 
