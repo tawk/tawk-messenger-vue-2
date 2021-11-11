@@ -9,7 +9,7 @@
 </p>
 
 <h1 align="center">
-    Vue Tawk messenger
+    Tawk messenger for Vue
 </h1>
 
 > A plugin for Vue js framework of [tawk.to](https://www.tawk.to/) messenger.
@@ -17,8 +17,11 @@
 ## Getting Started
 The plugin is available in node package manager.
 ```bash
-# Add as dependency
-$ npm install tawk-messenger-vue
+# Node
+npm install tawk-messenger-vue
+
+# Yarn
+yarn add tawk-messenger-vue
 ```
 
 ## Documentation

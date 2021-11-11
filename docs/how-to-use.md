@@ -27,7 +27,7 @@ Vue.use(TawkMessengerVue, {
 });
 
 // In your vue components you can call the $tawkMessenger globally
-this.$tawkMessenger.$on('onLoad', () => {
+this.$tawkMessenger.$on('load', () => {
     // place your code here
 });
 
