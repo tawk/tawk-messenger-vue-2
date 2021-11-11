@@ -1,5 +1,5 @@
 // Utilities
-import { loadScript } from '../utils/file';
+import { loadScript } from '../utils/widget';
 
 class TawkMessenger {
 	constructor(root, options) {
