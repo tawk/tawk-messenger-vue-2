@@ -49,211 +49,173 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 - [customStyle](#customstyle)
 
 ## onLoad
-Callback function invoked right after the widget is rendered. This callback is not supported in pop out chat window.
+Listen on event that invoked right after the widget is rendered. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    // place your code here
 });
 ```
 
 ## onStatusChange
-Callback function invoked when the page status changes. The function will receive the changed status which will be either online, away or offline. This callback is not supported in pop out chat window.
+Listen on event that invoked when the page status changes. The function will receive the changed status which will be either online, away or offline. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onStatusChange : function (status) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onStatusChage', (status) => {
+    // place your code here
 });
 ```
 
 ## onBeforeLoad
-Callback function invoked right when Tawk_API is ready to be used and before the widget is rendered. This callback is not supported in pop out chat window.
+Listen on event that invoked right when Tawk_API is ready to be used and before the widget is rendered. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onBeforeLoad : function () {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onBeforeLoad', () => {
+    // place your code here
 });
 ```
 
 ## onChatMaximized
-Callback function invoked when the widget is maximized. This callback is not supported in pop out chat window.
+Listen on event that invoked when the widget is maximized. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatMaximized : function () {
-        // place your code here
-    }
-});
+this.$tawkMessenger.$on('onChatMaximized', () => {
+    // place your code here
+})
 ```
 
 ## onChatMinimized
-Callback function invoked when the widget is minimized. This callback is not supported in pop out chat window.
+Listen on event that invoked when the widget is minimized. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatMinimized : function () {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatMinimized', () => {
+    // place your code here
 });
 ```
 
 ## onChatHidden
-Callback function invoked when the widget is hidden. This callback is not supported in pop out chat window.
+Listen on event that invoked when the widget is hidden. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatHidden : function () {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatHidden', () => {
+    // place your code here
 });
 ```
 
 ## onChatStarted
-Callback function invoked when the widget is started.
+Listen on event that invoked when the widget is started.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatStarted : function () {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatStarted', () => {
+    // place your code here
 });
 ```
 
 ## onChatEnded
-Callback function invoked when the widget is ended. This callback is not supported in pop out chat window.
+Listen on event that invoked when the widget is ended. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatEnded : function () {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatEnded', () => {
+    // place your code here
 });
 ```
 
 ## onPrechatSubmit
-Callback function invoked when the Pre-Chat Form is submitted. The submitted form data is passed to the function. This callback is not supported in pop out chat window.
+Listen on event that invoked when the Pre-Chat Form is submitted. The submitted form data is passed to the function. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onPrechatSubmit : function (data) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onPrechatSubmit', (data) => {
+    // place your code here
 });
 ```
 
 ## onOfflineSubmit
-Callback function invoked when the Offline form is submitted. The submitted form data is passed to the callback. Form data will contain {name : ”, email : ”, message : ”, questions : []}. This callback is not supported in pop out chat window.
+Listen on event that invoked when the Offline form is submitted. The submitted form data is passed to the function. Form data will contain {name : ”, email : ”, message : ”, questions : []}. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onOfflineSubmit : function (data) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onOfflineSubmit', (data) => {
+    // place your code here
 });
 ```
 
 ## onChatMessageVisitor
-Callback function invoked when message is sent by the visitor. The message is passed to the callback. This callback is not supported in pop out chat window.
+Listen on event that invoked when message is sent by the visitor. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onOfflineSubmit : function (message) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatMessageVisitor', (message) => {
+    // place your code here
 });
 ```
 
 ## onChatMessageAgent
-Callback function invoked when message is sent by the agent. The message is passed to the callback. This callback is not supported in pop out chat window.
+Listen on event that invoked when message is sent by the agent. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatMessageAgent : function (message) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatMessageAgent', (message) => {
+    // place your code here
 });
 ```
 
 ## onChatMessageSystem
-Callback function invoked when message is sent by the system. The message is passed to the callback. This callback is not supported in pop out chat window.
+Listen on event that invoked when message is sent by the system. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatMessageSystem : function (message) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatMessageSystem', (message) => {
+    // place your code here
 });
 ```
 
 ## onAgentJoinChat
-Callback function invoked when an agent joins the chat. The data is passed to the callback. Will contain {name : ”, position : ”, image : ”, id : ”}. This callback is not supported in pop out chat window.
+Listen on event that invoked when an agent joins the chat. The data is passed to the function. Will contain {name : ”, position : ”, image : ”, id : ”}. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onAgentJoinChat : function (data) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onAgentJoinChat', (data) => {
+    // place your code here
 });
 ```
 
 ## onAgentLeaveChat
-Callback function invoked when an agent leaves the chat. The data is passed to the callback. Will contain {name : ”, id : ”}. This callback is not supported in pop out chat window.
+Listen on event that invoked when an agent leaves the chat. The data is passed to the function. Will contain {name : ”, id : ”}. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onAgentLeaveChat : function (data) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onAgentLeaveChat', (data) => {
+    // place your code here
 });
 ```
 
 ## onChatSatisfaction
-Callback function invoked when an agent leaves the chat. The satisfaction is passed to the callback. -1 = dislike | 0 = neutral | 1 = like. This callback is not supported in pop out chat window.
+Listen on event that invoked when an agent leaves the chat. The satisfaction is passed to the function. -1 = dislike | 0 = neutral | 1 = like. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onChatSatisfaction : function (satisfaction) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onChatSatisfaction', (satisfaction) => {
+    // place your code here
 });
 ```
 
 ## onVisitorNameChanged
-Callback function invoked when the visitor manually changes his name. The visitorName is passed to the callback. This callback is not supported in pop out chat window.
+Listen on event that invoked when the visitor manually changes his name. The visitorName is passed to the function. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onVisitorNameChanged : function (visitorName) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onVisitorNameChanged', (visitorName) => {
+    // place your code here
 });
 ```
 
 ## onFileUpload
-Callback function invoked when a file is uploaded. The link to the uploaded file is passed to the callback. This callback is not supported in pop out chat window.
+Listen on event that invoked when a file is uploaded. The link to the uploaded file is passed to the function. This is not supported in pop out chat window.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onFileUpload : function (link) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onFileUpload', (link) => {
+    // place your code here
 });
 ```
 
 ## onTagsUpdated
-Callback function invoked when a tag is updated.
+Listen on event that invoked when a tag is updated.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    onTagsUpdated : function (data) {
-        // place your code here
-    }
+this.$tawkMessenger.$on('onTagsUpdated', (data) => {
+    // place your code here
 });
 ```
 
@@ -265,11 +227,9 @@ Setting or changing the values after the widget script has been downloaded will 
 If the name and email will not be available on load time (eg single page app, ajax login), then use the [setAttributes](#setAttributes) function instead.
 
 ```js
-Vue.use(TawkMessengerVue, {
-    visitor : {
-        name : 'Name',
-        email : 'email@email.com'
-    }
+this.$tawkMessenger.visitor({
+    name : 'Name',
+    email : 'email@email.com'
 });
 ```
 
@@ -277,14 +237,12 @@ Vue.use(TawkMessengerVue, {
 Maximizes the chat widget.
 
 ```js
-$tawkMessengerVue.maximize();
+this.$tawkMessenger.maximize();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.maximize();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.maximize();
 });
 ```
 
@@ -292,14 +250,12 @@ Vue.use(TawkMessengerVue, {
 Minimizes the chat widget.
 
 ```js
-$tawkMessengerVue.minimize();
+this.$tawkMessenger.minimize();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.minimize();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.minimize();
 });
 ```
 
@@ -307,14 +263,12 @@ Vue.use(TawkMessengerVue, {
 Minimizes or Maximizes the chat widget based on the current state.
 
 ```js
-$tawkMessengerVue.toggle();
+this.$tawkMessenger.toggle();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.toggle();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.toggle();
 });
 ```
 
@@ -322,14 +276,12 @@ Vue.use(TawkMessengerVue, {
 Opens the chat widget as a pop out.
 
 ```js
-$tawkMessengerVue.popup();
+this.$tawkMessenger.popup();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.popup();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.popup();
 });
 ```
 
@@ -337,17 +289,15 @@ Vue.use(TawkMessengerVue, {
 Returns the current widget type whether it’s inline or embed.
 
 ```js
-$tawkMessengerVue.getWindowType();
+this.$tawkMessenger.getWindowType();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        if ($tawkMessengerVue.getWindowType() === 'inline') {
-            // do something if it's inline
-        } else {
-            // do something if it's embed
-        }
+this.$tawkMessenger.$on('onLoad', () => {
+    if (this.$tawkMessenger.getWindowType() === 'inline') {
+        // do something if it's inline
+    } else {
+        // do something if it's embed
     }
 });
 ```
@@ -356,14 +306,12 @@ Vue.use(TawkMessengerVue, {
 Shows the chat widget.
 
 ```js
-$tawkMessengerVue.showWidget();
+this.$tawkMessenger.showWidget();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.showWidget();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.showWidget();
 });
 ```
 
@@ -371,14 +319,12 @@ Vue.use(TawkMessengerVue, {
 Hide the chat widget.
 
 ```js
-$tawkMessengerVue.hideWidget();
+this.$tawkMessenger.hideWidget();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.hideWidget();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.hideWidget();
 });
 ```
 
@@ -387,14 +333,12 @@ Vue.use(TawkMessengerVue, {
 Hides or Shows the chat widget based on the current visibility state.
 
 ```js
-$tawkMessengerVue.toggleVisibility();
+this.$tawkMessenger.toggleVisibility();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.toggleVisibility();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.toggleVisibility();
 });
 ```
 
@@ -402,21 +346,19 @@ Vue.use(TawkMessengerVue, {
 Returns the current page status (online, away or offline).
 
 ```js
-$tawkMessengerVue.getStatus();
+this.$tawkMessenger.getStatus();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        const pageStatus = $tawkMessengerVue.getStatus();
+this.$tawkMessenger.$on('onLoad', () => {
+    const pageStatus = this.$tawkMessenger.getStatus();
 
-        if (pageStatus === 'online') {
-            // do something for online
-        } else if (pageStatus === 'away') {
-            // do something for away
-        } else {
-            // do something for offline
-        }
+    if (pageStatus === 'online') {
+        // do something for online
+    } else if (pageStatus === 'away') {
+        // do something for away
+    } else {
+        // do something for offline
     }
 });
 ```
@@ -425,15 +367,13 @@ Vue.use(TawkMessengerVue, {
 Returns a boolean value (true or false) indicating whether the chat widget is maximized.
 
 ```js
-$tawkMessengerVue.isChatMaximized();
+this.$tawkMessenger.isChatMaximized();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        if ($tawkMessengerVue.isChatMaximized()) {
-            // do something it it's maximized
-        }
+this.$tawkMessenger.$on('onLoad', () => {
+    if (this.$tawkMessenger.isChatMaximized()) {
+        // do something it it's maximized
     }
 });
 ```
@@ -442,15 +382,13 @@ Vue.use(TawkMessengerVue, {
 Returns a boolean value (true or false) indicating whether the chat widget is minimized.
 
 ```js
-$tawkMessengerVue.isChatMinimized();
+this.$tawkMessenger.isChatMinimized();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        if ($tawkMessengerVue.isChatMinimized()) {
-            // do something if it's minimized
-        }
+this.$tawkMessenger.$on('onLoad', () => {
+    if (this.$tawkMessenger.isChatMinimized()) {
+        // do something if it's minimized
     }
 });
 ```
@@ -459,15 +397,13 @@ Vue.use(TawkMessengerVue, {
 Returns a boolean value (true or false) indicating whether the chat widget is hidden.
 
 ```js
-$tawkMessengerVue.isChatHidden();
+this.$tawkMessenger.isChatHidden();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        if ($tawkMessengerVue.isChatHidden()) {
-            // do something if chat widget is hidden
-        }
+this.$tawkMessenger.$on('onLoad', () => {
+    if (this.$tawkMessenger.isChatHidden()) {
+        // do something if chat widget is hidden
     }
 });
 ```
@@ -476,15 +412,13 @@ Vue.use(TawkMessengerVue, {
 Returns a boolean value (true or false) indicating whether currently there is an ongoing chat.
 
 ```js
-$tawkMessengerVue.isChatOngoing();
+this.$tawkMessenger.isChatOngoing();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        if ($tawkMessengerVue.isChatOngoing()) {
-            // do something if there's ongoing chat
-        }
+this.$tawkMessenger.$on('onLoad', () => {
+    if (this.$tawkMessenger.isChatOngoing()) {
+        // do something if there's ongoing chat
     }
 });
 ```
@@ -493,15 +427,13 @@ Vue.use(TawkMessengerVue, {
 Returns a boolean value (true or false) indicating whether the visitor is currently chatting or has requested a chat.
 
 ```js
-$tawkMessengerVue.isVisitorEngaged();
+this.$tawkMessenger.isVisitorEngaged();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        if ($tawkMessengerVue.isVisitorEngaged()) {
-            // do something if visitor engaged in chat
-        }
+this.$tawkMessenger.$on('onLoad', () => {
+    if (this.$tawkMessenger.isVisitorEngaged()) {
+        // do something if visitor engaged in chat
     }
 });
 ```
@@ -510,14 +442,12 @@ Vue.use(TawkMessengerVue, {
 Ends the current ongoing chat.
 
 ```js
-$tawkMessengerVue.endChat();
+this.$tawkMessenger.endChat();
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.endChat();
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.endChat();
 });
 ```
 
@@ -549,33 +479,29 @@ Error messages returned:
 1. CONTAINS_INVALID_VALUE: Custom value is empty or the total length is more than 255 characters
 
 ```js
-$tawkMessengerVue.setAttributes(attributes, callback);
+this.$tawkMessenger.setAttributes(attributes, callback);
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.setAttributes({
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.setAttributes({
             id : 'A1234',
             store : 'Midvalley'
-        }, function (error) {
+        }, function(error) {
             // do something if error
         });
-    }
 });
 
 // Example for setting name and email
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.setAttributes({
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.setAttributes({
             name : 'Name',
             email : 'email@email.com',
             hash : 'hash value'
-        }, function (error) {
+        }, function(error) {
             // do something if error
         });
-    }
 });
 ```
 
@@ -590,31 +516,29 @@ The callback which is a function will be invoked to notify whether the save fail
 INVALID_EVENT_NAME, INVALID_ATTRIBUTES, ATTRIBUTE_LIMIT_EXCEEDED, CONTAINS_INVALID_KEY, CONTAINS_INVALID_VALUE, SESSION_EXPIRED, SERVER_ERROR
 
 ```js
-$tawkMessengerVue.addEvent(eventName, metaData, callback);
+this.$tawkMessenger.addEvent(eventName, metaData, callback);
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.addEvent(
-            'requested-quotation',
-            function (error) {
-                // do something if error
-            }
-        );
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.addEvent(
+        'requested-quotation',
+        function(error) {
+            // do something if error
+        }
+    );
 
-        $tawkMessengerVue.addEvent(
-            'product-add-to-cart',
-            {
-                sku : 'A0012',
-                name : 'Jeans',
-                price : '50'
-            },
-            function (error) {
-                // do something if error
-            }
-        );
-    }
+    this.$tawkMessenger.addEvent(
+        'product-add-to-cart',
+        {
+            sku : 'A0012',
+            name : 'Jeans',
+            price : '50'
+        },
+        function(error) {
+            // do something if error
+        }
+    );
 });
 ```
 
@@ -634,18 +558,16 @@ $tawkMessengerVue.addTags(tags, callback);
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.addTags(
-            [
-                'hello',
-                'world'
-            ],
-            function (error) {
-                // do something if error
-            }
-        );
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.addTags(
+        [
+            'hello',
+            'world'
+        ],
+        function(error) {
+            // do something if error
+        }
+    );
 });
 ```
 
@@ -664,18 +586,16 @@ $tawkMessengerVue.removeTags(tags, callback);
 
 // Example
 
-Vue.use(TawkMessengerVue, {
-    onLoad : function () {
-        $tawkMessengerVue.removeTags(
-            [
-                'hello',
-                'world'
-            ],
-            function (error) {
-                // do something if error
-            }
-        );
-    }
+this.$tawkMessenger.$on('onLoad', () => {
+    this.$tawkMessenger.removeTags(
+        [
+            'hello',
+            'world'
+        ],
+        function (error) {
+            // do something if error
+        }
+    );
 });
 ```
 
@@ -689,17 +609,11 @@ The hash is server side generated HMAC using SHA256, the user’s email and your
 You can get your API key from **Admin>Property Settings**.
 
 ```js
-$tawkMessengerVue.removeTags(tags, callback);
-
-// Example
-
-Vue.use(TawkMessengerVue, {
-    visitor : {
-        name : 'Name',
-        email : 'email@email.com',
-        hash : '<calculate-hash>'
-    }
-});
+this.$tawkMessenger.visitor({
+    name : 'Name',
+    email : 'email@email.com',
+    hash : '<calculate-hash>'
+})
 ```
 
 ## customstyle
