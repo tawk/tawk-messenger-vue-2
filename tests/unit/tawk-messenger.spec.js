@@ -4,7 +4,7 @@ import { mount, createLocalVue } from '@vue/test-utils';
 import TawkMessengerVue from '../../src';
 
 const localVue = createLocalVue();
-localVue.use(TawkMessengerVue, { propertyId : '5f33cbbdc990133f3e60468e', widgetId : 'default' });
+localVue.use(TawkMessengerVue, { propertyId : 'property_id', widgetId : 'widget_id' });
 
 describe('Tawk-messenger plugin', () => {
 	let mountApp;

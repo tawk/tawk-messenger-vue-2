@@ -5,7 +5,7 @@ function loadScript(propertyId, widgetId) {
 
 	const script = document.createElement('script');
 	script.async = true;
-	script.src = `https://embed.talk.lv/${propertyId}/${widgetId}`;
+	script.src = `https://tawk.to/chat/${propertyId}/${widgetId}`;
 	script.charset = 'UTF-8';
 	script.setAttribute('crossorigin', '*');
 
