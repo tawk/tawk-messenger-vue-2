@@ -3,9 +3,6 @@ import TawkMessenger from './lib';
 // Utilities
 import { isValidString } from './utils/helper';
 
-
-let installed = false;
-
 function install(Vue, options = {}) {
 	const { propertyId, widgetId } = options;
 
@@ -21,17 +18,11 @@ function install(Vue, options = {}) {
 
 	Vue.mixin({
 		mounted() {
-			if (installed) {
-				return;
-			}
-
 			const root = new Vue();
 
 			new TawkMessenger(root, options);
 
 			Vue.prototype.$tawkMessenger = root;
-
-			installed = true;
 		}
 	});
 }
