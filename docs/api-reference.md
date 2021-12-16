@@ -5,6 +5,8 @@ The API provides a flexible set of methods that can be used in your web projects
 
 Use the JavaScript API to manipulate the chat widget displayed on your website.
 
+<br/>
+
 ## Table of contents
 - [load](#load)
 - [statusChange](#statuschange)
@@ -48,6 +50,8 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 - [secureMode](#securemode)
 - [customStyle](#customstyle)
 
+<br/>
+
 ## load
 Listen on event that invoked right after the widget is rendered. This is not supported in pop out chat window.
 
@@ -56,6 +60,8 @@ this.$tawkMessenger.$on('load', () => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## statusChange
 Listen on event that invoked when the page status changes. The function will receive the changed status which will be either online, away or offline. This is not supported in pop out chat window.
@@ -66,6 +72,8 @@ this.$tawkMessenger.$on('statusChage', (status) => {
 });
 ```
 
+<br/>
+
 ## beforeLoad
 Listen on event that invoked right when Tawk_API is ready to be used and before the widget is rendered. This is not supported in pop out chat window.
 
@@ -74,6 +82,8 @@ this.$tawkMessenger.$on('beforeLoad', () => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## chatMaximized
 Listen on event that invoked when the widget is maximized. This is not supported in pop out chat window.
@@ -84,6 +94,8 @@ this.$tawkMessenger.$on('chatMaximized', () => {
 })
 ```
 
+<br/>
+
 ## chatMinimized
 Listen on event that invoked when the widget is minimized. This is not supported in pop out chat window.
 
@@ -92,6 +104,8 @@ this.$tawkMessenger.$on('chatMinimized', () => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## chatHidden
 Listen on event that invoked when the widget is hidden. This is not supported in pop out chat window.
@@ -102,6 +116,8 @@ this.$tawkMessenger.$on('chatHidden', () => {
 });
 ```
 
+<br/>
+
 ## chatStarted
 Listen on event that invoked when the widget is started.
 
@@ -110,6 +126,8 @@ this.$tawkMessenger.$on('chatStarted', () => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## chatEnded
 Listen on event that invoked when the widget is ended. This is not supported in pop out chat window.
@@ -120,6 +138,8 @@ this.$tawkMessenger.$on('chatEnded', () => {
 });
 ```
 
+<br/>
+
 ## prechatSubmit
 Listen on event that invoked when the Pre-Chat Form is submitted. The submitted form data is passed to the function. This is not supported in pop out chat window.
 
@@ -128,6 +148,8 @@ this.$tawkMessenger.$on('prechatSubmit', (data) => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## offlineSubmit
 Listen on event that invoked when the Offline form is submitted. The submitted form data is passed to the function. Form data will contain {name : ”, email : ”, message : ”, questions : []}. This is not supported in pop out chat window.
@@ -138,6 +160,8 @@ this.$tawkMessenger.$on('offlineSubmit', (data) => {
 });
 ```
 
+<br/>
+
 ## chatMessageVisitor
 Listen on event that invoked when message is sent by the visitor. The message is passed to the function. This is not supported in pop out chat window.
 
@@ -146,6 +170,8 @@ this.$tawkMessenger.$on('chatMessageVisitor', (message) => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## chatMessageAgent
 Listen on event that invoked when message is sent by the agent. The message is passed to the function. This is not supported in pop out chat window.
@@ -156,6 +182,8 @@ this.$tawkMessenger.$on('chatMessageAgent', (message) => {
 });
 ```
 
+<br/>
+
 ## chatMessageSystem
 Listen on event that invoked when message is sent by the system. The message is passed to the function. This is not supported in pop out chat window.
 
@@ -164,6 +192,8 @@ this.$tawkMessenger.$on('chatMessageSystem', (message) => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## agentJoinChat
 Listen on event that invoked when an agent joins the chat. The data is passed to the function. Will contain {name : ”, position : ”, image : ”, id : ”}. This is not supported in pop out chat window.
@@ -174,6 +204,8 @@ this.$tawkMessenger.$on('agentJoinChat', (data) => {
 });
 ```
 
+<br/>
+
 ## agentLeaveChat
 Listen on event that invoked when an agent leaves the chat. The data is passed to the function. Will contain {name : ”, id : ”}. This is not supported in pop out chat window.
 
@@ -182,6 +214,8 @@ this.$tawkMessenger.$on('agentLeaveChat', (data) => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## chatSatisfaction
 Listen on event that invoked when an agent leaves the chat. The satisfaction is passed to the function. -1 = dislike | 0 = neutral | 1 = like. This is not supported in pop out chat window.
@@ -192,6 +226,8 @@ this.$tawkMessenger.$on('chatSatisfaction', (satisfaction) => {
 });
 ```
 
+<br/>
+
 ## visitorNameChanged
 Listen on event that invoked when the visitor manually changes his name. The visitorName is passed to the function. This is not supported in pop out chat window.
 
@@ -200,6 +236,8 @@ this.$tawkMessenger.$on('visitorNameChanged', (visitorName) => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## fileUpload
 Listen on event that invoked when a file is uploaded. The link to the uploaded file is passed to the function. This is not supported in pop out chat window.
@@ -210,6 +248,8 @@ this.$tawkMessenger.$on('fileUpload', (link) => {
 });
 ```
 
+<br/>
+
 ## tagsUpdated
 Listen on event that invoked when a tag is updated.
 
@@ -218,6 +258,8 @@ this.$tawkMessenger.$on('tagsUpdated', (data) => {
     // place your code here
 });
 ```
+
+<br/>
 
 ## visitor
 Object used to set the visitor name and email. Do not place this object in a function, as the values need to be available before the widget script is downloaded.
@@ -233,6 +275,8 @@ this.$tawkMessenger.visitor({
 });
 ```
 
+<br/>
+
 ## maximize
 Maximizes the chat widget.
 
@@ -245,6 +289,8 @@ this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.maximize();
 });
 ```
+
+<br/>
 
 ## minimize
 Minimizes the chat widget.
@@ -259,6 +305,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## toggle
 Minimizes or Maximizes the chat widget based on the current state.
 
@@ -272,6 +320,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## popup
 Opens the chat widget as a pop out.
 
@@ -284,6 +334,8 @@ this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.popup();
 });
 ```
+
+<br/>
 
 ## getWindowType
 Returns the current widget type whether it’s inline or embed.
@@ -302,6 +354,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## showWidget
 Shows the chat widget.
 
@@ -314,6 +368,8 @@ this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.showWidget();
 });
 ```
+
+<br/>
 
 ## hideWidget
 Hide the chat widget.
@@ -328,6 +384,7 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
 
 ## toggleVisibility
 Hides or Shows the chat widget based on the current visibility state.
@@ -341,6 +398,8 @@ this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.toggleVisibility();
 });
 ```
+
+<br/>
 
 ## getStatus
 Returns the current page status (online, away or offline).
@@ -363,6 +422,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## isChatMaximized
 Returns a boolean value (true or false) indicating whether the chat widget is maximized.
 
@@ -377,6 +438,8 @@ this.$tawkMessenger.$on('load', () => {
     }
 });
 ```
+
+<br/>
 
 ## isChatMinimized
 Returns a boolean value (true or false) indicating whether the chat widget is minimized.
@@ -393,6 +456,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## isChatHidden
 Returns a boolean value (true or false) indicating whether the chat widget is hidden.
 
@@ -407,6 +472,8 @@ this.$tawkMessenger.$on('load', () => {
     }
 });
 ```
+
+<br/>
 
 ## isChatOngoing
 Returns a boolean value (true or false) indicating whether currently there is an ongoing chat.
@@ -423,6 +490,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## isVisitorEngaged
 Returns a boolean value (true or false) indicating whether the visitor is currently chatting or has requested a chat.
 
@@ -438,6 +507,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## endChat
 Ends the current ongoing chat.
 
@@ -450,6 +521,8 @@ this.$tawkMessenger.$on('load', () => {
     this.$tawkMessenger.endChat();
 });
 ```
+
+<br/>
 
 ## setAttributes
 Set custom metadata regarding this chat/visitor.
@@ -505,6 +578,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## addEvent
 Set a custom event to chat.
 This function takes in 3 values: event name, optional metadata and callback.
@@ -542,6 +617,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## addTags
 Add tags to the chat.
 This function takes in two values; tags and callback.
@@ -571,6 +648,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## removeTags
 Remove tags from the chat.
 This function takes in two values: tags and callback.
@@ -599,6 +678,8 @@ this.$tawkMessenger.$on('load', () => {
 });
 ```
 
+<br/>
+
 ## secureMode
 Secure method is to ensure the data you are sending is actually from you.
 
@@ -615,6 +696,8 @@ this.$tawkMessenger.visitor({
     hash : '<calculate-hash>'
 })
 ```
+
+<br/>
 
 ## customstyle
 Object used to update the widget styling. Currently only supports zIndex style. Do not place this object in a function, as the values need to be available before the widget script is downloaded. Setting or changing the values after the widget script has been downloaded will not update the widget’s style.
