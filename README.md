@@ -52,7 +52,7 @@ Vue.use(TawkMessengerVue, {
 
 <br/>
 
-If you will use the plugin the Nuxt JS here is the [guide for setup](docs/server-side-rendering.md).
+If you will use the plugin the Nuxt JS here is the [guide for setup](docs/ssr-setup.md).
 
 <br/>
 
