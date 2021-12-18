@@ -3,5 +3,5 @@ export function isValidString(type, value) {
 		return false;
 	}
 
-	return value instanceof type || (value !== null && value !== undefined && value.constructor === type);
+	return value !== null && value !== undefined && value.constructor === type;
 }

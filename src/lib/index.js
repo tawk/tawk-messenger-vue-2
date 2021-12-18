@@ -4,8 +4,13 @@ import { isValidString } from '../utils/helper';
 
 class TawkMessenger {
 	constructor(root, options) {
-		if (!isValidString(String, options.propertyId)) return;
-		if (!isValidString(String, options.widgetId)) return;
+		if (!isValidString(String, options.propertyId)) {
+			return;
+		}
+
+		if (!isValidString(String, options.widgetId)) {
+			return;
+		}
 		
 		this.root = root;
 		this.propertyId = options.propertyId;
@@ -24,6 +29,7 @@ class TawkMessenger {
 		 * Set placeholder
 		 */
 		window.Tawk_API = window.Tawk_API || {};
+		window.Tawk_LoadStart = new Date();
 
 		/**
 		 * Inject the Tawk script

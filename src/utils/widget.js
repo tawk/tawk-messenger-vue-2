@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 
 function loadScript(propertyId, widgetId) {
-	var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-
 	const script = document.createElement('script');
 	script.async = true;
 	script.src = `https://tawk.to/chat/${propertyId}/${widgetId}`;
