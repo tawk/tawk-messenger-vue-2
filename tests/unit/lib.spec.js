@@ -1,18 +1,19 @@
-// Lib
+// Library
 import TawkMessenger from '../../src/lib';
+
 // Utilities
 import { loadScript } from '../../src/utils/widget';
 
 jest.useFakeTimers();
 
-describe('TawkMessenger: Class', () => {
+describe('Tawk-messenger Library', () => {
 	afterEach(() => {
 		jest.resetModules();
 		jest.clearAllMocks();
 	});
 
-	describe('TawkMessenger', () => {
-		it('Should fail to init TawkMessenger without propertyId and widgetId', () => {
+	describe('Set the properties value', () => {
+		it('Should set empty properties', () => {
 			const tawkMessenger = new TawkMessenger(TawkMessenger, {});
 
 			expect(tawkMessenger).toEqual(
@@ -25,7 +26,7 @@ describe('TawkMessenger: Class', () => {
 			);
 		});
 
-		it('should init TawkMessenger with property and widgetId', () => {
+		it('Should set the required properties', () => {
 			const tawkMessenger = new TawkMessenger(TawkMessenger,
 				{ 
 					propertyId : 'fakePropertyId',
@@ -42,8 +43,10 @@ describe('TawkMessenger: Class', () => {
 				})
 			);
 		});
+	});
 
-		it('should load TawkMessenger script and init', () => {
+	describe('Embed widget', () => {
+		it('Should request TawkMessenger script', () => {
 			const tawkMessenger = new TawkMessenger(TawkMessenger,
 				{ 
 					propertyId : 'fakePropertyId',
