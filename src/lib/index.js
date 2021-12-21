@@ -15,6 +15,7 @@ class TawkMessenger {
 		this.root = root;
 		this.propertyId = options.propertyId;
 		this.widgetId = options.widgetId;
+		this.embedId = options.embedId;
 		this.settings = options.settings;
 
 		this.load();
@@ -34,7 +35,11 @@ class TawkMessenger {
 		/**
 		 * Inject the Tawk script
 		 */
-		loadScript(this.propertyId, this.widgetId);
+		loadScript({
+			propertyId : this.propertyId,
+			widgetId : this.widgetId,
+			embedId : this.embedId
+		});
 
 		this.init();
 	}

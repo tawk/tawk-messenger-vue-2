@@ -1,9 +1,24 @@
+/* global Tawk_API */
 /* eslint-disable no-unused-vars */
 
-function loadScript(propertyId, widgetId) {
+function loadScript({propertyId = '', widgetId = '', embedId = ''}) {
+	if (embedId.length) {
+		/**
+		 * If the element with embedId as id we will create a new clement
+		 */
+		if (!document.getElementById(embedId)) {
+			const element = document.createElement('div');
+			element.id = embedId;
+	
+			document.body.appendChild(element);
+		}
+
+		Tawk_API.embedded = embedId;
+	}
+
 	const script = document.createElement('script');
 	script.async = true;
-	script.src = `https://tawk.to/chat/${propertyId}/${widgetId}`;
+	script.src = `https://embed.tawk.to/${propertyId}/${widgetId}`;
 	script.charset = 'UTF-8';
 	script.setAttribute('crossorigin', '*');
 
