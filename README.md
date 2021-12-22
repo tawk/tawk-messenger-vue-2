@@ -1,18 +1,10 @@
-<p align="center">
-    <a href="https://www.tawk.to/"
-    target="_blank"
-    rel="noopener noreferrer">
-        <img width="120"
-            src="https://www.tawk.to/wp-content/uploads/2020/04/tawk-sitelogo.png"
-            alt="Tawk logo">
-    </a>
-</p>
-
 <h1 align="center">
-    Tawk messenger for Vue
+    Notice: Still Under Development
 </h1>
 
-> A plugin for Vue js framework of [tawk.to](https://www.tawk.to/) messenger.
+<br/><br/>
+
+# ![solid-headless](/images/banner.jpg)
 
 <br/>
 
