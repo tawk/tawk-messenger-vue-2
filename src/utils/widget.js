@@ -3,7 +3,7 @@
 function loadScript(propertyId, widgetId) {
 	const script = document.createElement('script');
 	script.async = true;
-	script.src = `https://tawk.to/chat/${propertyId}/${widgetId}`;
+	script.src = `https://embed.tawk.to/${propertyId}/${widgetId}`;
 	script.charset = 'UTF-8';
 	script.setAttribute('crossorigin', '*');
 
