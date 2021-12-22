@@ -27,6 +27,7 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 - [visitorNameChanged](#visitornamechanged)
 - [fileUpload](#fileupload)
 - [tagsUpdated](#tagsupdated)
+- [unreadCountChanged](#unreadcountchanged)
 - [visitor](#visitor)
 - [maximize](#maximize)
 - [minimize](#minimize)
@@ -42,6 +43,9 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 - [isChatHidden](#ischathidden)
 - [isChatOngoing](#ischatongoing)
 - [isVisitorEngaged](#isvisitorengaged)
+- [onLoaded](#onloaded)
+- [onBeforeLoaded](#onbeforeloaded)
+- [widgetPosition](#widgetposition)
 - [endChat](#endchat)
 - [setAttributes](#setattributes)
 - [addEvent](#addevent)
@@ -255,6 +259,17 @@ Listen on event that invoked when a tag is updated.
 
 ```js
 this.$tawkMessenger.$on('tagsUpdated', (data) => {
+    // place your code here
+});
+```
+
+<br/>
+
+## unreadCountChanged
+Listen on event that returns count of unread messages.
+
+```js
+this.$tawkMessenger.$on('unreadCountChanged', (count) => {
     // place your code here
 });
 ```
@@ -503,6 +518,46 @@ this.$tawkMessenger.isVisitorEngaged();
 this.$tawkMessenger.$on('load', () => {
     if (this.$tawkMessenger.isVisitorEngaged()) {
         // do something if visitor engaged in chat
+    }
+});
+```
+
+<br/>
+
+## onLoaded
+Returns a boolean value (true or undefined) indicating when the plugin is ready.
+
+```js
+this.$tawkMessenger.onLoaded();
+
+// Example
+if (this.$tawkMessenger.onLoaded()) {
+    // do something when widget is ready
+}
+```
+
+## onBeforeLoaded
+Returns a boolean value (true or undefined) indicating when plugin is initialize.
+
+```js
+this.$tawkMessenger.onBeforeLoaded();
+
+// Example
+if (this.$tawkMessenger.onBeforeLoaded()) {
+    // do something before onload
+}
+```
+
+## widgetPosition
+Returns a string for current position of the widget.
+
+```js
+this.$tawkMessenger.widgetPosition();
+
+// Example
+this.$tawkMessenger.$on('load', () => {
+    if (this.$tawkMessenger.widgetPosition() === 'br') {
+        // do something if the widget is at bottom right
     }
 });
 ```
