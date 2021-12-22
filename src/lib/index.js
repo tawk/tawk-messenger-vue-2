@@ -81,6 +81,8 @@ class TawkMessenger {
 		this.root.isChatOngoing = () => window.Tawk_API.isChatOngoing();
 		this.root.isVisitorEngaged = () => window.Tawk_API.isVisitorEngaged();
 		this.root.onLoaded = () => window.Tawk_API.onLoaded;
+		this.root.onBeforeLoaded = () => window.Tawk_API.onBeforeLoaded;
+		this.root.widgetPosition = () => window.Tawk_API.widgetPosition();
 	}
 
 	/**
@@ -162,6 +164,10 @@ class TawkMessenger {
 
 		window.addEventListener('tawkTagsUpdated', (data) => {
 			this.root.$emit('tagsUpdated', data.detail);
+		});
+
+		window.addEventListener('tawkUnreadCountChanged', (data) => {
+			this.root.$emit('unreadCountChanged', data.detail);
 		});
 	}
 
