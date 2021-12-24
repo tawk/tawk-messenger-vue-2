@@ -39,7 +39,7 @@ describe('Tawk-messenger Library', () => {
 					root : TawkMessenger,
 					propertyId : 'fakePropertyId',
 					widgetId : 'default',
-					settings : undefined
+					customStyle : undefined
 				})
 			);
 		});

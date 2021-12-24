@@ -15,7 +15,7 @@ class TawkMessenger {
 		this.root = root;
 		this.propertyId = options.propertyId;
 		this.widgetId = options.widgetId;
-		this.settings = options.settings;
+		this.customStyle = options.customStyle;
 
 		this.load();
 	}
@@ -40,10 +40,8 @@ class TawkMessenger {
 	}
 
 	init() {
-		if (this.settings && typeof this.settings === 'object') {
-			if (this.settings.customStyle && typeof this.settings.customStyle === 'object') {
-				window.Tawk_API.customStyle = this.settings.customStyle;
-			}
+		if (this.customStyle && typeof this.customStyle === 'object') {
+			window.Tawk_API.customStyle = this.customStyle;
 		}
 
 		/**
