@@ -757,10 +757,12 @@ this.$tawkMessenger.visitor({
 ## customstyle
 Object used to update the widget styling. Currently only supports zIndex style. Do not place this object in a function, as the values need to be available before the widget script is downloaded. Setting or changing the values after the widget script has been downloaded will not update the widget’s style.
 
+### zIndex
 ```js
+// ZIndex
 Vue.use(TawkMessengerVue, {
     customStyle : {
-        zIndex : Integer|String
+        zIndex : Integer | String 
     }
 });
 
@@ -781,6 +783,50 @@ Vue.use(TawkMessengerVue, {
 Vue.use(TawkMessengerVue, {
     customStyle : {
         zIndex : '1000 !important'
+    }
+});
+```
+
+<br/>
+
+### Visibility
+```js
+// ZIndex
+Vue.use(TawkMessengerVue, {
+    customStyle : {
+        visibility : {
+            dekstop : {
+                xOffset : String | Integer, // '20' || 20
+                yOffset : String | Integer,
+                position : '' // 'br', 'bl', 'cr', 'cl', 'tr', 'tl'
+            },
+
+            mobile : {
+                xOffset : String | Integer, // '20' || 20
+                yOffset : String | Integer,
+                position : '' // 'br', 'bl', 'cr', 'cl', 'tr', 'tl'
+            }
+        }
+    }
+});
+
+// Example
+
+Vue.use(TawkMessengerVue, {
+    customStyle : {
+        visibility : {
+            dekstop : {
+                xOffset : '15',
+                yOffset : '15',
+                position : 'cr'
+            },
+
+            mobile : {
+                xOffset : 15,
+                yOffset : 15,
+                position : 'bl'
+            }
+        }
     }
 });
 ```
