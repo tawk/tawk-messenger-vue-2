@@ -21,7 +21,7 @@ describe('Tawk-messenger Library', () => {
 					root : TawkMessenger,
 					propertyId : undefined,
 					widgetId : undefined,
-					settings : undefined
+					customStyle : undefined
 				})
 			);
 		});
