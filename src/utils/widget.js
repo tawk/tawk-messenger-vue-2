@@ -1,4 +1,3 @@
-/* global Tawk_API */
 /* eslint-disable no-unused-vars */
 
 function loadScript({propertyId = '', widgetId = '', embedId = ''}) {
@@ -13,7 +12,7 @@ function loadScript({propertyId = '', widgetId = '', embedId = ''}) {
 			document.body.appendChild(element);
 		}
 
-		Tawk_API.embedded = embedId;
+		window.Tawk_API.embedded = embedId;
 	}
 
 	const script = document.createElement('script');
