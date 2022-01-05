@@ -16,7 +16,7 @@ class TawkMessenger {
 		this.propertyId = options.propertyId;
 		this.widgetId = options.widgetId;
 		this.embedId = options.embedId;
-		this.settings = options.settings;
+		this.customStyle = options.customStyle;
 
 		this.load();
 	}
@@ -45,10 +45,8 @@ class TawkMessenger {
 	}
 
 	init() {
-		if (this.settings && typeof this.settings === 'object') {
-			if (this.settings.customStyle && typeof this.settings.customStyle === 'object') {
-				window.Tawk_API.customStyle = this.settings.customStyle;
-			}
+		if (this.customStyle && typeof this.customStyle === 'object') {
+			window.Tawk_API.customStyle = this.customStyle;
 		}
 
 		/**
@@ -86,6 +84,8 @@ class TawkMessenger {
 		this.root.isChatOngoing = () => window.Tawk_API.isChatOngoing();
 		this.root.isVisitorEngaged = () => window.Tawk_API.isVisitorEngaged();
 		this.root.onLoaded = () => window.Tawk_API.onLoaded;
+		this.root.onBeforeLoaded = () => window.Tawk_API.onBeforeLoaded;
+		this.root.widgetPosition = () => window.Tawk_API.widgetPosition();
 	}
 
 	/**
@@ -167,6 +167,10 @@ class TawkMessenger {
 
 		window.addEventListener('tawkTagsUpdated', (data) => {
 			this.root.$emit('tagsUpdated', data.detail);
+		});
+
+		window.addEventListener('tawkUnreadCountChanged', (data) => {
+			this.root.$emit('unreadCountChanged', data.detail);
 		});
 	}
 
