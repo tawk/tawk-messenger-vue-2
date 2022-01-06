@@ -1,9 +1,32 @@
 {
   "name": "tawk-messenger-vue",
   "version": "0.1.0",
-  "description": "Vue plugin for Tawk messenger",
+  "description": "Official Vue plugin for Tawk messenger",
+  "keywords": [
+    "vuejs",
+    "vue",
+    "nuxt",
+    "vue-plugin",
+    "tawk",
+    "nuxt-plugin",
+    "tawkto",
+    "vue-tawk",
+    "nuxt-tawk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tawk/tawk-messenger-vue.git",
+    "repository": "tawk/tawk-messenger-vue"
+  },
+  "homepage": "https://github.com/tawk/tawk-messenger-vue#readme",
+  "bugs": {
+    "url": "https://github.com/tawk/tawk-messenger-vue/issues",
+    "email": "support@tawk.to"
+  },
+  "license": "Apache-2.0",
+  "author": "Jerald Austero <jerald.austero@tawk.to> (https://www.tawk.to)",
+  "files": ["dist"],
   "main": "./dist/tawk-messenger-vue.js",
-  "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "lint": "vue-cli-service lint",
