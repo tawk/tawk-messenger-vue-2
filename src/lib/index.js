@@ -2,19 +2,21 @@
 import { loadScript } from '../utils/widget';
 import { isValidString } from '../utils/helper';
 
+
 class TawkMessenger {
 	constructor(root, options) {
-		if (!isValidString(String, options.propertyId)) {
+		if (!isValidString(options.propertyId)) {
 			return;
 		}
 
-		if (!isValidString(String, options.widgetId)) {
+		if (!isValidString(options.widgetId)) {
 			return;
 		}
 		
 		this.root = root;
 		this.propertyId = options.propertyId;
 		this.widgetId = options.widgetId;
+		this.embedId = options.embedId;
 		this.customStyle = options.customStyle;
 
 		this.load();
@@ -34,7 +36,11 @@ class TawkMessenger {
 		/**
 		 * Inject the Tawk script
 		 */
-		loadScript(this.propertyId, this.widgetId);
+		loadScript({
+			propertyId : this.propertyId,
+			widgetId : this.widgetId,
+			embedId : this.embedId
+		});
 
 		this.init();
 	}

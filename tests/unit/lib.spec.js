@@ -21,7 +21,7 @@ describe('Tawk-messenger Library', () => {
 					root : TawkMessenger,
 					propertyId : undefined,
 					widgetId : undefined,
-					settings : undefined
+					customStyle : undefined
 				})
 			);
 		});
@@ -50,13 +50,18 @@ describe('Tawk-messenger Library', () => {
 			const tawkMessenger = new TawkMessenger(TawkMessenger,
 				{ 
 					propertyId : 'fakePropertyId',
-					widgetId : 'default'
+					widgetId : 'default',
+					embedId : 'fake-id'
 				}
 			);
 			jest.spyOn(tawkMessenger, 'init');
 
 			tawkMessenger.load();
-			expect(loadScript).toHaveBeenCalledWith('fakePropertyId', 'default');
+			expect(loadScript).toHaveBeenCalledWith({
+				propertyId : 'fakePropertyId',
+				widgetId : 'default',
+				embedId : 'fake-id'
+			});
 		});
 	});
 });
