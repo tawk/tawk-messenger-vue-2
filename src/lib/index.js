@@ -1,13 +1,15 @@
 // Utilities
 import { loadScript } from '../utils/widget';
+import { isValidString } from '../utils/helper';
+
 
 class TawkMessenger {
 	constructor(root, options) {
-		if (typeof options.propertyId !== 'string') {
+		if (!isValidString(options.propertyId)) {
 			return;
 		}
 
-		if (typeof options.widgetId !== 'string') {
+		if (!isValidString(options.widgetId)) {
 			return;
 		}
 		
