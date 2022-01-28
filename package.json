@@ -1,6 +1,6 @@
 {
   "name": "tawk-messenger-vue",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "description": "Official Vue plugin for Tawk messenger",
   "keywords": [
     "vuejs",
