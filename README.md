@@ -1,10 +1,8 @@
-<h1 align="center">
-    Notice: Still Under Development
-</h1>
-
-<br/><br/>
-
-# ![solid-headless](/images/banner.jpg)
+<p align="center">
+    <img width="250"
+        src="./images/tawk-vue-logo.png"
+        alt="Tawk Vue logo">
+</p>
 
 <br/>
 
@@ -61,7 +59,7 @@ This project includes a `docs` folder with more details on:
 - [Vue Js](https://github.com/tawk/tawk-messenger-vue)
 - [React Js](https://github.com/tawk/tawk-messenger-react)
 - [Angular Js](https://github.com/tawk/tawk-messenger-angular)
-- Ember Js
+- [Ember Js](https://github.com/tawk/tawk-messenger-ember)
 
 <br/>
 
