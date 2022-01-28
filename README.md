@@ -17,10 +17,10 @@
 The plugin are available in node and yarn package managers.
 ```bash
 # Node
-npm install tawk-messenger-vue
+npm install @tawk.to/tawk-messenger-vue
 
 # Yarn
-yarn add tawk-messenger-vue
+yarn add @tawk.to/tawk-messenger-vue
 ```
 
 <br/>
@@ -30,7 +30,7 @@ Import the **tawk-messenger-vue** in your main component. The **propertyId** and
 be found on your tawk dashboard **Administration > Chat Widget**.
 
 ```js
-import TawkMessengerVue from 'tawk-messenger-vue';
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue';
 
 Vue.use(TawkMessengerVue, {
     propertyId : 'property_id',
