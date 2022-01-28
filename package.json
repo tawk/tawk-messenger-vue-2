@@ -1,5 +1,5 @@
 {
-  "name": "tawk-messenger-vue",
+  "name": "@tawk.to/tawk-messenger-vue",
   "version": "0.0.2",
   "description": "Official Vue plugin for Tawk messenger",
   "keywords": [
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tawk/tawk-messenger-vue.git",
+    "url": "git+https://github.com/tawk/tawk-messenger-vue.git",
     "repository": "tawk/tawk-messenger-vue"
   },
   "homepage": "https://github.com/tawk/tawk-messenger-vue#readme",
@@ -25,7 +25,9 @@
   },
   "license": "Apache-2.0",
   "author": "Jerald Austero <jerald.austero@tawk.to> (https://www.tawk.to)",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/tawk-messenger-vue.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
@@ -67,5 +69,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  }
 }
