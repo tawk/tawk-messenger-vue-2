@@ -4,8 +4,6 @@
         alt="Tawk Vue logo">
 </p>
 
-<br/>
-
 ## Features
 - Compatible on Vue 2, Vue 3 and Nuxt
 - Documented and Self explaining methods
