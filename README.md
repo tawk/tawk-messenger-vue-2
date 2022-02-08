@@ -14,7 +14,7 @@
 <br/>
 
 ## Installation
-The plugins are available in node and yarn package managers.
+The plugins are available from the node and yarn package managers.
 ```bash
 # Node
 npm install @tawk.to/tawk-messenger-vue
@@ -26,7 +26,7 @@ yarn add @tawk.to/tawk-messenger-vue
 <br/>
 
 ## Quickstart
-Import the **tawk-messenger-vue** in your main component. The **propertyId** and **widgetId** will
+Import the **tawk-messenger-vue** in your main JavaScript file in **src/** folder. The **propertyId** and **widgetId** will
 be found on your tawk Dashboard.
 
 Log in to your account and go to **Administration > Channels > Chat Widget**.
@@ -64,10 +64,14 @@ This project includes a `docs` folder with more details on the following:
 
 ## Frequently Asked Questions
 
+**Do you have a knowledge base or article to support implementation?**
+
+Here is our guide for the [Vue.js integration](https://help.tawk.to/article/vue-js )
+
 **Where can I find more information and support?**
 
 Visit our [help center](https://help.tawk.to) or reach out in the chat on our [website](https://tawk.to).
 
 **Where can I submit a suggestion or report a bug?**
 
-Just message us on our [website](https://tawk.to). Our agents are available to assist you 24/7.
+Check to see if the issue already exists. If not, open a new issue in the [Issues tab](https://github.com/tawk/tawk-messenger-vue/issues)
