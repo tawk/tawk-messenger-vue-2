@@ -6,15 +6,15 @@
 
 ## Features
 - Compatible on Vue 2, Vue 3 and Nuxt
-- Documented and Self explaining methods
+- Documented and self-explaining methods
 - Small size without any external libraries
-- All Javascript API are avaiable
-- Maintained by [tawk.to](https://www.tawk.to]) team
+- All Javascript API methods are avaiable
+- Maintained by the [tawk.to](https://www.tawk.to]) team
 
 <br/>
 
 ## Installation
-The plugin are available in node and yarn package managers.
+The plugins are available in node and yarn package managers.
 ```bash
 # Node
 npm install @tawk.to/tawk-messenger-vue
@@ -27,7 +27,9 @@ yarn add @tawk.to/tawk-messenger-vue
 
 ## Quickstart
 Import the **tawk-messenger-vue** in your main component. The **propertyId** and **widgetId** will
-be found on your tawk dashboard **Administration > Chat Widget**.
+be found on your tawk Dashboard.
+
+Log in to your account and go to **Administration > Channels > Chat Widget**.
 
 ```js
 import TawkMessengerVue from '@tawk.to/tawk-messenger-vue';
@@ -46,15 +48,14 @@ If you will use the plugin the Nuxt JS here is the [guide for setup](docs/ssr-se
 
 ## Documentation
 
-This project includes a `docs` folder with more details on:
+This project includes a `docs` folder with more details on the following:
 1.  [SPA setup](docs/spa-setup.md)
 1.  [SSR setup](docs/ssr-setup.md)
 1.  [API Reference](docs/api-reference.md)
 
 <br/>
 
-## Other JS frameworks plugin
-- [Vue Js](https://github.com/tawk/tawk-messenger-vue)
+## Other JS frameworks we support
 - [React Js](https://github.com/tawk/tawk-messenger-react)
 - [Angular Js](https://github.com/tawk/tawk-messenger-angular)
 - [Ember Js](https://github.com/tawk/tawk-messenger-ember)
@@ -63,6 +64,10 @@ This project includes a `docs` folder with more details on:
 
 ## Frequently Asked Questions
 
-**Where you can approach us for suggestion or bug report?**
+**Where can I find more information and support?**
 
-You can mention us on [Twitter](https://twitter.com/tawktotawk) or in our [Website](https://www.tawk.to/) just message us.
+Visit our [help center](https://help.tawk.to) or reach out in the chat on our [website](https://tawk.to).
+
+**Where can I submit a suggestion or report a bug?**
+
+Just message us on our [website](https://tawk.to). Our agents are available to assist you 24/7.
