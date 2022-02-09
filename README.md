@@ -42,7 +42,8 @@ Vue.use(TawkMessengerVue, {
 
 <br/>
 
-If you will use the plugin the Nuxt JS here is the [guide for setup](docs/ssr-setup.md).
+## Server Side Rendering
+If you will use the plugin with Nuxt JS follow this [guide for setup](docs/ssr-setup.md).
 
 <br/>
 
@@ -70,7 +71,7 @@ Here is our guide for the [Vue.js integration](https://help.tawk.to/article/vue-
 
 **Where can I find more information and support?**
 
-Visit our [help center](https://help.tawk.to) or reach out in the chat on our [website](https://tawk.to).
+Visit our [help center](https://help.tawk.to) or reach out in the chat on our [website](https://tawk.to). Our agents are available to assist you 24/7.
 
 **Where can I submit a suggestion or report a bug?**
 
