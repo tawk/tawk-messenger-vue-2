@@ -18,6 +18,7 @@ class TawkMessenger {
 		this.widgetId = options.widgetId;
 		this.embedId = options.embedId;
 		this.customStyle = options.customStyle;
+		this.basePath = options.basePath;
 
 		this.load();
 	}
@@ -39,7 +40,8 @@ class TawkMessenger {
 		loadScript({
 			propertyId : this.propertyId,
 			widgetId : this.widgetId,
-			embedId : this.embedId
+			embedId : this.embedId,
+			basePath : this.basePath
 		});
 
 		this.init();
