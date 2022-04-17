@@ -5,7 +5,7 @@ Here are the basic of how to use callbacks and expose functions from the plugin.
 
 ## Instance property
 To access the API functions, call the **$tawkMessenger** anywhere in your components. Upon using
-the **tawk-messenger-vue** it will auto register the global scope.
+the **tawk-messenger-vue-2** it will auto register the global scope.
 
 ```js
 this.$tawkMessenger.toggle();
