@@ -5,7 +5,7 @@
 </p>
 
 ## Features
-- Compatible on Vue 2 and Nuxt
+- Compatible on Vue 2, Vue 3 and Nuxt
 - Documented and self-explaining methods
 - Small size without any external libraries
 - All Javascript API methods are avaiable
@@ -17,22 +17,22 @@
 The plugins are available from the node and yarn package managers.
 ```bash
 # Node
-npm install @tawk.to/tawk-messenger-vue-2
+npm install @tawk.to/tawk-messenger-vue
 
 # Yarn
-yarn add @tawk.to/tawk-messenger-vue-2
+yarn add @tawk.to/tawk-messenger-vue
 ```
 
 <br/>
 
 ## Quickstart
-Import the **tawk-messenger-vue-2** in your main JavaScript file in **src/** folder. The **propertyId** and **widgetId** will
+Import the **tawk-messenger-vue** in your main JavaScript file in **src/** folder. The **propertyId** and **widgetId** will
 be found on your tawk Dashboard.
 
 Log in to your account and go to **Administration > Channels > Chat Widget**.
 
 ```js
-import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-2';
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue';
 
 Vue.use(TawkMessengerVue, {
     propertyId : 'property_id',
@@ -57,7 +57,6 @@ This project includes a `docs` folder with more details on the following:
 <br/>
 
 ## Other JS frameworks we support
-- [Vue 3 JS](https://github.com/tawk/tawk-messenger-vue-3)
 - [React Js](https://github.com/tawk/tawk-messenger-react)
 - [Angular Js](https://github.com/tawk/tawk-messenger-angular)
 - [Ember Js](https://github.com/tawk/tawk-messenger-ember)
@@ -76,4 +75,4 @@ Visit our [help center](https://help.tawk.to) or reach out in the chat on our [w
 
 **Where can I submit a suggestion or report a bug?**
 
-Check to see if the issue already exists. If not, open a new issue in the [Issues tab](https://github.com/tawk/tawk-messenger-vue-2/issues)
+Check to see if the issue already exists. If not, open a new issue in the [Issues tab](https://github.com/tawk/tawk-messenger-vue/issues)

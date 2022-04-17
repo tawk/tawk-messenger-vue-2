@@ -9,7 +9,7 @@ code below.
 
 ```js
 import Vue from 'vue';
-import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-2';
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue';
 
 export default function () {
     Vue.use(TawkMessengerVue, {
