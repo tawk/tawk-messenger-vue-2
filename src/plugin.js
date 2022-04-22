@@ -3,7 +3,7 @@ import { install } from './install';
 
 
 const VueTawkMessenger = {
-	version : 'v1',
+	version : '1.0.3',
 	install
 };
 
