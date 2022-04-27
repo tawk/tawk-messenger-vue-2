@@ -49,11 +49,11 @@ this.$tawkMessenger.toggle();
 <br/>
 
 ## Event handling
-You can listen on events emitted by the plugin, It must be exactly match the name used to listen
+You can add a callback on event listeners, It must be exactly match the name used to listen
 to that event.
 
 ```js
-this.$tawkMessenger.$on('load', () => {
+this.$tawkMessenger.onLoad(() => {
     // place your code here
 });
 ```
