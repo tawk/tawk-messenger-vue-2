@@ -8,272 +8,268 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 <br/>
 
 ## Table of contents
-- [API Reference](#api-reference)
-  - [Table of contents](#table-of-contents)
-  - [onLoad](#onload)
-  - [onStatusChange](#onstatuschange)
-  - [onBeforeLoad](#onbeforeload)
-  - [onChatMaximized](#onchatmaximized)
-  - [onChatMinimized](#onchatminimized)
-  - [onChatHidden](#onchathidden)
-  - [onChatStarted](#onchatstarted)
-  - [onChatEnded](#onchatended)
-  - [onPrechatSubmit](#onprechatsubmit)
-  - [onOfflineSubmit](#onofflinesubmit)
-  - [onChatMessageVisitor](#onchatmessagevisitor)
-  - [onChatMessageAgent](#onchatmessageagent)
-  - [onChatMessageSystem](#onchatmessagesystem)
-  - [onAgentJoinChat](#onagentjoinchat)
-  - [onAgentLeaveChat](#onagentleavechat)
-  - [onChatSatisfaction](#onchatsatisfaction)
-  - [onVisitorNameChanged](#onvisitornamechanged)
-  - [onFileUpload](#onfileupload)
-  - [onTagsUpdated](#ontagsupdated)
-  - [onUnreadCountChanged](#onunreadcountchanged)
-  - [visitor](#visitor)
-  - [maximize](#maximize)
-  - [minimize](#minimize)
-  - [toggle](#toggle)
-  - [popup](#popup)
-  - [getWindowType](#getwindowtype)
-  - [showWidget](#showwidget)
-  - [hideWidget](#hidewidget)
-  - [toggleVisibility](#togglevisibility)
-  - [getStatus](#getstatus)
-  - [isChatMaximized](#ischatmaximized)
-  - [isChatMinimized](#ischatminimized)
-  - [isChatHidden](#ischathidden)
-  - [isChatOngoing](#ischatongoing)
-  - [isVisitorEngaged](#isvisitorengaged)
-  - [onLoaded](#onloaded)
-  - [onBeforeLoaded](#onbeforeloaded)
-  - [widgetPosition](#widgetposition)
-  - [endChat](#endchat)
-  - [setAttributes](#setattributes)
-  - [addEvent](#addevent)
-  - [addTags](#addtags)
-  - [removeTags](#removetags)
-  - [secureMode](#securemode)
-  - [customstyle](#customstyle)
-    - [zIndex](#zindex)
-    - [Visibility](#visibility)
+- [load](#load)
+- [statusChange](#statuschange)
+- [beforeLoad](#beforeload)
+- [chatMaximized](#chatmaximized)
+- [chatMinimized](#chatminimized)
+- [chatHidden](#chathidden)
+- [chatStarted](#chatstarted)
+- [chatEnded](#chatended)
+- [prechatSubmit](#prechatsubmit)
+- [offlineSubmit](#offlinesubmit)
+- [chatMessageVisitor](#chatmessagevisitor)
+- [chatMessageAgent](#chatmessageagent)
+- [chatMessageSystem](#chatmessagesystem)
+- [agentJoinChat](#agentjoinchat)
+- [agentLeaveChat](#agentleavechat)
+- [chatSatisfaction](#chatsatisfaction)
+- [visitorNameChanged](#visitornamechanged)
+- [fileUpload](#fileupload)
+- [tagsUpdated](#tagsupdated)
+- [unreadCountChanged](#unreadcountchanged)
+- [visitor](#visitor)
+- [maximize](#maximize)
+- [minimize](#minimize)
+- [toggle](#toggle)
+- [popup](#popup)
+- [getWindowType](#getwindowtype)
+- [showWidget](#showwidget)
+- [hideWidget](#hidewidget)
+- [toggleVisibility](#togglevisibility)
+- [getStatus](#getstatus)
+- [isChatMaximized](#ischatmaximized)
+- [isChatMinimized](#ischatminimized)
+- [isChatHidden](#ischathidden)
+- [isChatOngoing](#ischatongoing)
+- [isVisitorEngaged](#isvisitorengaged)
+- [onLoaded](#onloaded)
+- [onBeforeLoaded](#onbeforeloaded)
+- [widgetPosition](#widgetposition)
+- [endChat](#endchat)
+- [setAttributes](#setattributes)
+- [addEvent](#addevent)
+- [addTags](#addtags)
+- [removeTags](#removetags)
+- [secureMode](#securemode)
+- [customStyle](#customstyle)
 
 <br/>
 
-## onLoad
-Callback function invoked right after the widget is rendered. This callback is not supported in pop out chat window.
+## load
+Listen on event that invoked right after the widget is rendered. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onLoad(() => {
+this.$tawkMessenger.$on('load', () => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onStatusChange
-Callback function invoked when the page status changes. The function will receive the changed status which will be either online, away or offline. This callback is not supported in pop out chat window.
+## statusChange
+Listen on event that invoked when the page status changes. The function will receive the changed status which will be either online, away or offline. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onStatusChage((status) => {
+this.$tawkMessenger.$on('statusChage', (status) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onBeforeLoad
-Callback function invoked right when Tawk_API is ready to be used and before the widget is rendered. This callback is not supported in pop out chat window.
+## beforeLoad
+Listen on event that invoked right when Tawk_API is ready to be used and before the widget is rendered. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onBeforeLoad(() => {
+this.$tawkMessenger.$on('beforeLoad', () => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatMaximized
-Callback function invoked when the widget is maximized. This callback is not supported in pop out chat window.
+## chatMaximized
+Listen on event that invoked when the widget is maximized. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatMaximized(() => {
+this.$tawkMessenger.$on('chatMaximized', () => {
     // place your code here
 })
 ```
 
 <br/>
 
-## onChatMinimized
-Callback function invoked when the widget is minimized. This callback is not supported in pop out chat window.
+## chatMinimized
+Listen on event that invoked when the widget is minimized. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatMinimized(() => {
+this.$tawkMessenger.$on('chatMinimized', () => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatHidden
-Callback function invoked when the widget is hidden. This callback is not supported in pop out chat window.
+## chatHidden
+Listen on event that invoked when the widget is hidden. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatHidden(() => {
+this.$tawkMessenger.$on('chatHidden', () => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatStarted
-Callback function invoked when the widget is started.
+## chatStarted
+Listen on event that invoked when the widget is started.
 
 ```js
-this.$tawkMessenger.onChatStarted(() => {
+this.$tawkMessenger.$on('chatStarted', () => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatEnded
-Callback function invoked when the widget is ended. This callback is not supported in pop out chat window.
+## chatEnded
+Listen on event that invoked when the widget is ended. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatEnded(() => {
+this.$tawkMessenger.$on('chatEnded', () => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onPrechatSubmit
-Callback function invoked when the Pre-Chat Form is submitted. The submitted form data is passed to the function. This callback is not supported in pop out chat window.
+## prechatSubmit
+Listen on event that invoked when the Pre-Chat Form is submitted. The submitted form data is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onPrechatSubmit((data) => {
+this.$tawkMessenger.$on('prechatSubmit', (data) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onOfflineSubmit
-Callback function invoked when the Offline form is submitted. The submitted form data is passed to the function. Form data will contain {name : ”, email : ”, message : ”, questions : []}. This callback is not supported in pop out chat window.
+## offlineSubmit
+Listen on event that invoked when the Offline form is submitted. The submitted form data is passed to the function. Form data will contain {name : ”, email : ”, message : ”, questions : []}. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onOfflineSubmit((data) => {
+this.$tawkMessenger.$on('offlineSubmit', (data) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatMessageVisitor
-Callback function invoked when message is sent by the visitor. The message is passed to the function. This callback is not supported in pop out chat window.
+## chatMessageVisitor
+Listen on event that invoked when message is sent by the visitor. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatMessageVisitor((message) => {
+this.$tawkMessenger.$on('chatMessageVisitor', (message) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatMessageAgent
-Callback function invoked when message is sent by the agent. The message is passed to the function. This callback is not supported in pop out chat window.
+## chatMessageAgent
+Listen on event that invoked when message is sent by the agent. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatMessageAgent((message) => {
+this.$tawkMessenger.$on('chatMessageAgent', (message) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatMessageSystem
-Callback function invoked when message is sent by the system. The message is passed to the function. This callback is not supported in pop out chat window.
+## chatMessageSystem
+Listen on event that invoked when message is sent by the system. The message is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatMessageSystem((message) => {
+this.$tawkMessenger.$on('chatMessageSystem', (message) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onAgentJoinChat
-Callback function invoked when an agent joins the chat. The data is passed to the function. Will contain {name : ”, position : ”, image : ”, id : ”}. This callback is not supported in pop out chat window.
+## agentJoinChat
+Listen on event that invoked when an agent joins the chat. The data is passed to the function. Will contain {name : ”, position : ”, image : ”, id : ”}. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onAgentJoinChat((data) => {
+this.$tawkMessenger.$on('agentJoinChat', (data) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onAgentLeaveChat
-Callback function invoked when an agent leaves the chat. The data is passed to the function. Will contain {name : ”, id : ”}. This callback is not supported in pop out chat window.
+## agentLeaveChat
+Listen on event that invoked when an agent leaves the chat. The data is passed to the function. Will contain {name : ”, id : ”}. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onAgentLeaveChat((data) => {
+this.$tawkMessenger.$on('agentLeaveChat', (data) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onChatSatisfaction
-Callback function invoked when an agent leaves the chat. The satisfaction is passed to the function. -1 = dislike | 0 = neutral | 1 = like. This callback is not supported in pop out chat window.
+## chatSatisfaction
+Listen on event that invoked when an agent leaves the chat. The satisfaction is passed to the function. -1 = dislike | 0 = neutral | 1 = like. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onChatSatisfaction((satisfaction) => {
+this.$tawkMessenger.$on('chatSatisfaction', (satisfaction) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onVisitorNameChanged
-Callback function invoked when the visitor manually changes his name. The visitorName is passed to the function. This callback is not supported in pop out chat window.
+## visitorNameChanged
+Listen on event that invoked when the visitor manually changes his name. The visitorName is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onVisitorNameChanged((visitorName) => {
+this.$tawkMessenger.$on('visitorNameChanged', (visitorName) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onFileUpload
-Callback function invoked when a file is uploaded. The link to the uploaded file is passed to the function. This callback is not supported in pop out chat window.
+## fileUpload
+Listen on event that invoked when a file is uploaded. The link to the uploaded file is passed to the function. This is not supported in pop out chat window.
 
 ```js
-this.$tawkMessenger.onFileUpload((link) => {
+this.$tawkMessenger.$on('fileUpload', (link) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onTagsUpdated
-Callback function invoked when a tag is updated.
+## tagsUpdated
+Listen on event that invoked when a tag is updated.
 
 ```js
-this.$tawkMessenger.onTagsUpdated((data) => {
+this.$tawkMessenger.$on('tagsUpdated', (data) => {
     // place your code here
 });
 ```
 
 <br/>
 
-## onUnreadCountChanged
-Callback function returns count of unread messages.
+## unreadCountChanged
+Listen on event that returns count of unread messages.
 
 ```js
-this.$tawkMessenger.onUnreadCountChanged((count) => {
+this.$tawkMessenger.$on('unreadCountChanged', (count) => {
     // place your code here
 });
 ```
