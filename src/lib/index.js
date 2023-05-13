@@ -184,7 +184,7 @@ class TawkMessenger {
 		this.root.addEvent = (event, metadata, callback) => window.Tawk_API.addEvent(event, metadata, callback);
 		this.root.addTags = (tags, callback) => window.Tawk_API.addTags(tags, callback);
 		this.root.removeTags = (tags, callback) => window.Tawk_API.removeTags(tags, callback);
-		this.root.switchWidget = (options, callback) => window.Tawk_API.switchWidget(options, callback);
+		this.root.switchWidget = (data, callback) => window.Tawk_API.switchWidget(data, callback);
 	}
 }
 
