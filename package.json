@@ -1,7 +1,7 @@
 {
-  "name": "tawk-messenger-vue",
-  "version": "0.1.0",
-  "description": "Official Vue plugin for Tawk messenger",
+  "name": "@tawk.to/tawk-messenger-vue-2",
+  "version": "1.0.3",
+  "description": "Official Vue 2 plugin for Tawk messenger",
   "keywords": [
     "vuejs",
     "vue",
@@ -11,30 +11,30 @@
     "nuxt-plugin",
     "tawkto",
     "vue-tawk",
-    "nuxt-tawk"
+    "nuxt-tawk",
+    "vue2",
+    "vue2-tawk"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tawk/tawk-messenger-vue.git",
-    "repository": "tawk/tawk-messenger-vue"
+    "url": "git+https://github.com/tawk/tawk-messenger-vue-2.git",
+    "repository": "tawk/tawk-messenger-vue-2"
   },
-  "homepage": "https://github.com/tawk/tawk-messenger-vue#readme",
+  "homepage": "https://github.com/tawk/tawk-messenger-vue-2#readme",
   "bugs": {
-    "url": "https://github.com/tawk/tawk-messenger-vue/issues",
+    "url": "https://github.com/tawk/tawk-messenger-vue-2/issues",
     "email": "support@tawk.to"
   },
   "license": "Apache-2.0",
   "author": "Jerald Austero <jerald.austero@tawk.to> (https://www.tawk.to)",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/tawk-messenger-vue.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "lint": "vue-cli-service lint",
     "test:unit": "NODE_ENV=test vue-cli-service test:unit"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -47,7 +47,12 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -67,5 +72,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  }
 }

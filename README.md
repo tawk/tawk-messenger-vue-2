@@ -1,40 +1,38 @@
-<h1 align="center">
-    Notice: Still Under Development
-</h1>
-
-<br/><br/>
-
-# ![solid-headless](/images/banner.jpg)
-
-<br/>
+<p align="center">
+    <img width="250"
+        src="./images/tawk-vue-logo.png"
+        alt="Tawk Vue logo">
+</p>
 
 ## Features
-- Compatible on Vue 2, Vue 3 and Nuxt
-- Documented and Self explaining methods
+- Compatible on Vue 2 and Nuxt
+- Documented and self-explaining methods
 - Small size without any external libraries
-- All Javascript API are avaiable
-- Maintained by [tawk.to](https://www.tawk.to]) team
+- All Javascript API methods are avaiable
+- Maintained by the [tawk.to](https://www.tawk.to]) team
 
 <br/>
 
 ## Installation
-The plugin are available in node and yarn package managers.
+The plugins are available from the node and yarn package managers.
 ```bash
 # Node
-npm install tawk-messenger-vue
+npm install @tawk.to/tawk-messenger-vue-2
 
 # Yarn
-yarn add tawk-messenger-vue
+yarn add @tawk.to/tawk-messenger-vue-2
 ```
 
 <br/>
 
 ## Quickstart
-Import the **tawk-messenger-vue** in your main component. The **propertyId** and **widgetId** will
-be found on your tawk dashboard **Administration > Chat Widget**.
+Import the **tawk-messenger-vue-2** in your main JavaScript file in **src/** folder. The **propertyId** and **widgetId** will
+be found on your tawk Dashboard.
+
+Log in to your account and go to **Administration > Channels > Chat Widget**.
 
 ```js
-import TawkMessengerVue from 'tawk-messenger-vue';
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-2';
 
 Vue.use(TawkMessengerVue, {
     propertyId : 'property_id',
@@ -44,29 +42,38 @@ Vue.use(TawkMessengerVue, {
 
 <br/>
 
-If you will use the plugin the Nuxt JS here is the [guide for setup](docs/ssr-setup.md).
+## Server Side Rendering
+If you will use the plugin with Nuxt JS follow this [guide for setup](docs/ssr-setup.md).
 
 <br/>
 
 ## Documentation
 
-This project includes a `docs` folder with more details on:
+This project includes a `docs` folder with more details on the following:
 1.  [SPA setup](docs/spa-setup.md)
 1.  [SSR setup](docs/ssr-setup.md)
 1.  [API Reference](docs/api-reference.md)
 
 <br/>
 
-## Other JS frameworks plugin
-- [Vue Js](https://github.com/tawk/tawk-messenger-vue)
+## Other JS frameworks we support
+- [Vue 3 JS](https://github.com/tawk/tawk-messenger-vue-3)
 - [React Js](https://github.com/tawk/tawk-messenger-react)
 - [Angular Js](https://github.com/tawk/tawk-messenger-angular)
-- Ember Js
+- [Ember Js](https://github.com/tawk/tawk-messenger-ember)
 
 <br/>
 
 ## Frequently Asked Questions
 
-**Where you can approach us for suggestion or bug report?**
+**Do you have a knowledge base or article to support implementation?**
 
-You can mention us on [Twitter](https://twitter.com/tawktotawk) or in our [Website](https://www.tawk.to/) just message us.
+Here is our guide for the [Vue.js integration](https://help.tawk.to/article/vue-js )
+
+**Where can I find more information and support?**
+
+Visit our [help center](https://help.tawk.to) or reach out in the chat on our [website](https://tawk.to). Our agents are available to assist you 24/7.
+
+**Where can I submit a suggestion or report a bug?**
+
+Check to see if the issue already exists. If not, open a new issue in the [Issues tab](https://github.com/tawk/tawk-messenger-vue-2/issues)

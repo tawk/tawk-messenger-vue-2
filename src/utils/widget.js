@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-function loadScript({propertyId = '', widgetId = '', embedId = ''}) {
+function loadScript({propertyId = '', widgetId = '', embedId = '', basePath = 'tawk.to'}) {
 	if (embedId.length) {
 		/**
 		 * If the element with embedId as id we will create a new clement
@@ -17,7 +17,7 @@ function loadScript({propertyId = '', widgetId = '', embedId = ''}) {
 
 	const script = document.createElement('script');
 	script.async = true;
-	script.src = `https://embed.tawk.to/${propertyId}/${widgetId}`;
+	script.src = `https://embed.${basePath}/${propertyId}/${widgetId}`;
 	script.charset = 'UTF-8';
 	script.setAttribute('crossorigin', '*');
 
