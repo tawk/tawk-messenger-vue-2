@@ -21,7 +21,9 @@ function install(Vue, options = {}) {
 
 	Vue.mixin({
 		mounted() {
-			if (isTawkInstalled) return;
+			if (isTawkInstalled) { 
+				return;
+			}
 			
 			const root = new Vue();
 
