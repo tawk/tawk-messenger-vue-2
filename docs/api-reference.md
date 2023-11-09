@@ -8,51 +8,58 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
 <br/>
 
 ## Table of contents
-- [load](#load)
-- [statusChange](#statuschange)
-- [beforeLoad](#beforeload)
-- [chatMaximized](#chatmaximized)
-- [chatMinimized](#chatminimized)
-- [chatHidden](#chathidden)
-- [chatStarted](#chatstarted)
-- [chatEnded](#chatended)
-- [prechatSubmit](#prechatsubmit)
-- [offlineSubmit](#offlinesubmit)
-- [chatMessageVisitor](#chatmessagevisitor)
-- [chatMessageAgent](#chatmessageagent)
-- [chatMessageSystem](#chatmessagesystem)
-- [agentJoinChat](#agentjoinchat)
-- [agentLeaveChat](#agentleavechat)
-- [chatSatisfaction](#chatsatisfaction)
-- [visitorNameChanged](#visitornamechanged)
-- [fileUpload](#fileupload)
-- [tagsUpdated](#tagsupdated)
-- [unreadCountChanged](#unreadcountchanged)
-- [visitor](#visitor)
-- [maximize](#maximize)
-- [minimize](#minimize)
-- [toggle](#toggle)
-- [popup](#popup)
-- [getWindowType](#getwindowtype)
-- [showWidget](#showwidget)
-- [hideWidget](#hidewidget)
-- [toggleVisibility](#togglevisibility)
-- [getStatus](#getstatus)
-- [isChatMaximized](#ischatmaximized)
-- [isChatMinimized](#ischatminimized)
-- [isChatHidden](#ischathidden)
-- [isChatOngoing](#ischatongoing)
-- [isVisitorEngaged](#isvisitorengaged)
-- [onLoaded](#onloaded)
-- [onBeforeLoaded](#onbeforeloaded)
-- [widgetPosition](#widgetposition)
-- [endChat](#endchat)
-- [setAttributes](#setattributes)
-- [addEvent](#addevent)
-- [addTags](#addtags)
-- [removeTags](#removetags)
-- [secureMode](#securemode)
-- [customStyle](#customstyle)
+- [API Reference](#api-reference)
+  - [Table of contents](#table-of-contents)
+  - [load](#load)
+  - [statusChange](#statuschange)
+  - [beforeLoad](#beforeload)
+  - [chatMaximized](#chatmaximized)
+  - [chatMinimized](#chatminimized)
+  - [chatHidden](#chathidden)
+  - [chatStarted](#chatstarted)
+  - [chatEnded](#chatended)
+  - [prechatSubmit](#prechatsubmit)
+  - [offlineSubmit](#offlinesubmit)
+  - [chatMessageVisitor](#chatmessagevisitor)
+  - [chatMessageAgent](#chatmessageagent)
+  - [chatMessageSystem](#chatmessagesystem)
+  - [agentJoinChat](#agentjoinchat)
+  - [agentLeaveChat](#agentleavechat)
+  - [chatSatisfaction](#chatsatisfaction)
+  - [visitorNameChanged](#visitornamechanged)
+  - [fileUpload](#fileupload)
+  - [tagsUpdated](#tagsupdated)
+  - [unreadCountChanged](#unreadcountchanged)
+  - [visitor](#visitor)
+  - [autoStart](#autostart)
+  - [start](#start)
+  - [shutdown](#shutdown)
+  - [maximize](#maximize)
+  - [minimize](#minimize)
+  - [toggle](#toggle)
+  - [popup](#popup)
+  - [getWindowType](#getwindowtype)
+  - [showWidget](#showwidget)
+  - [hideWidget](#hidewidget)
+  - [toggleVisibility](#togglevisibility)
+  - [getStatus](#getstatus)
+  - [isChatMaximized](#ischatmaximized)
+  - [isChatMinimized](#ischatminimized)
+  - [isChatHidden](#ischathidden)
+  - [isChatOngoing](#ischatongoing)
+  - [isVisitorEngaged](#isvisitorengaged)
+  - [onLoaded](#onloaded)
+  - [onBeforeLoaded](#onbeforeloaded)
+  - [widgetPosition](#widgetposition)
+  - [endChat](#endchat)
+  - [setAttributes](#setattributes)
+  - [addEvent](#addevent)
+  - [addTags](#addtags)
+  - [removeTags](#removetags)
+  - [secureMode](#securemode)
+  - [customstyle](#customstyle)
+    - [zIndex](#zindex)
+    - [Visibility](#visibility)
 
 <br/>
 
@@ -288,6 +295,35 @@ this.$tawkMessenger.visitor({
     name : 'Name',
     email : 'email@email.com'
 });
+```
+
+<br/>
+
+## autoStart
+If set to true, it will auto-start the Tawk socket connection for chat services. If set to false,
+you will need to manually call the start API. It will not register and connect to the dashboard
+if this is set to false.
+
+```js
+this.$tawkMessenger.autoStart(false);
+```
+
+<br/>
+
+## start
+Start the tawk socket connection.
+
+```js
+this.$tawkMessenger.start();
+```
+
+<br/>
+
+## shutdown
+End the tawk socket connection.
+
+```js
+this.$tawkMessenger.shutdown();
 ```
 
 <br/>
