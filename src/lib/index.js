@@ -65,6 +65,8 @@ class TawkMessenger {
 	 * API for calling an action on the widget
 	 */
 	mapActions() {
+		this.root.start = () => window.Tawk_API.start();
+		this.root.shutdown = () => window.Tawk_API.shutdown();
 		this.root.maximize = () => window.Tawk_API.maximize();
 		this.root.minimize = () => window.Tawk_API.minimize();
 		this.root.toggle = () => window.Tawk_API.toggle();
@@ -181,6 +183,7 @@ class TawkMessenger {
 	 * API for setting a data on the widget
 	 */
 	mapSetters() {
+		this.root.autoStart = (enable) => window.Tawk_API.autoStart = enable;
 		this.root.visitor = (data) => window.Tawk_API.visitor = data;
 		this.root.setAttributes = (attribute, callback) => window.Tawk_API.setAttributes(attribute, callback);
 		this.root.addEvent = (event, metadata, callback) => window.Tawk_API.addEvent(event, metadata, callback);
