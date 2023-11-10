@@ -305,7 +305,13 @@ you will need to manually call the start API. It will not register and connect t
 if this is set to false.
 
 ```js
-this.$tawkMessenger.autoStart(false);
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-2';
+
+Vue.use(TawkMessengerVue, {
+    propertyId : 'property_id',
+    widgetId : 'widget_id',
+    autoStart : false
+});
 ```
 
 <br/>

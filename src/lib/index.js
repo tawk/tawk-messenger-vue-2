@@ -17,6 +17,7 @@ class TawkMessenger {
 		this.propertyId = options.propertyId;
 		this.widgetId = options.widgetId;
 		this.embedId = options.embedId;
+		this.autoStart = options.autoStart;
 		this.customStyle = options.customStyle;
 		this.basePath = options.basePath;
 
@@ -41,7 +42,8 @@ class TawkMessenger {
 			propertyId : this.propertyId,
 			widgetId : this.widgetId,
 			embedId : this.embedId,
-			basePath : this.basePath
+			basePath : this.basePath,
+			autoStart : this.autoStart
 		});
 
 		this.init();
@@ -183,7 +185,6 @@ class TawkMessenger {
 	 * API for setting a data on the widget
 	 */
 	mapSetters() {
-		this.root.autoStart = (enable) => window.Tawk_API.autoStart = enable;
 		this.root.visitor = (data) => window.Tawk_API.visitor = data;
 		this.root.setAttributes = (attribute, callback) => window.Tawk_API.setAttributes(attribute, callback);
 		this.root.addEvent = (event, metadata, callback) => window.Tawk_API.addEvent(event, metadata, callback);
