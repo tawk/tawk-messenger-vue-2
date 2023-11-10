@@ -15,6 +15,10 @@ function loadScript({propertyId = '', widgetId = '', embedId = '', basePath = 't
 		window.Tawk_API.embedded = embedId;
 	}
 
+	if (autoStart) {
+		window.Tawk_API.autoStart = autoStart;
+	}
+
 	const script = document.createElement('script');
 	script.async = true;
 	script.src = `https://embed.${basePath}/${propertyId}/${widgetId}`;
@@ -23,10 +27,6 @@ function loadScript({propertyId = '', widgetId = '', embedId = '', basePath = 't
 
 	const firstScript = document.getElementsByTagName('script')[0];
 	firstScript.parentNode.insertBefore(script, firstScript);
-
-	if (autoStart) {
-		window.Tawk_API.autoStart = autoStart;
-	}
 }
 
 export {
