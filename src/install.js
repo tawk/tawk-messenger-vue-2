@@ -19,11 +19,9 @@ function install(Vue, options = {}) {
 
 	Vue.mixin({
 		mounted() {
-			const root = new Vue();
-
-			new TawkMessenger(root, options);
-
-			Vue.prototype.$tawkMessenger = root;
+			if (!Vue.prototype.$tawkMessenger) {
+				Vue.prototype.$tawkMessenger = new TawkMessenger(this.$root, options);
+			}
 		}
 	});
 }
