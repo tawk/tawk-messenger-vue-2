@@ -43,7 +43,7 @@ module.exports = {
 To access the API functions, call the **$tawkMessenger** anywhere in your components.
 
 ```js
-this.$tawkMessenger.toggle();
+this.$tawkMessenger.tawkToggle();
 ```
 
 <br/>
@@ -53,7 +53,7 @@ You can listen on events emitted by the plugin, It must be exactly match the nam
 to that event.
 
 ```js
-this.$tawkMessenger.$on('load', () => {
+this.$tawkMessenger.$on('tawkLoad', () => {
     // place your code here
 });
 ```
