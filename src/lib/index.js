@@ -65,30 +65,30 @@ class TawkMessenger {
 	 * API for calling an action on the widget
 	 */
 	mapActions() {
-		this.root.maximize = () => window.Tawk_API.maximize();
-		this.root.minimize = () => window.Tawk_API.minimize();
-		this.root.toggle = () => window.Tawk_API.toggle();
-		this.root.popup = () => window.Tawk_API.popup();
-		this.root.showWidget = () => window.Tawk_API.showWidget();
-		this.root.hideWidget = () => window.Tawk_API.hideWidget();
-		this.root.toggleVisibility = () => window.Tawk_API.toggleVisibility();
-		this.root.endChat = () => window.Tawk_API.endChat();
+		this.root.tawkMaximize = () => window.Tawk_API.maximize();
+		this.root.tawkMinimize = () => window.Tawk_API.minimize();
+		this.root.tawkToggle = () => window.Tawk_API.toggle();
+		this.root.tawkPopup = () => window.Tawk_API.popup();
+		this.root.tawkShowWidget = () => window.Tawk_API.showWidget();
+		this.root.tawkHideWidget = () => window.Tawk_API.hideWidget();
+		this.root.tawkToggleVisibility = () => window.Tawk_API.toggleVisibility();
+		this.root.tawkEndChat = () => window.Tawk_API.endChat();
 	}
 
 	/**
 	 * API for returning a data
 	 */	
 	mapGetters() {
-		this.root.getWindowType = () => window.Tawk_API.getWindowType();
-		this.root.getStatus = () => window.Tawk_API.getStatus();
-		this.root.isChatMaximized = () => window.Tawk_API.isChatMaximized();
-		this.root.isChatMinimized = () => window.Tawk_API.isChatMinimized();
-		this.root.isChatHidden = () => window.Tawk_API.isChatHidden();
-		this.root.isChatOngoing = () => window.Tawk_API.isChatOngoing();
-		this.root.isVisitorEngaged = () => window.Tawk_API.isVisitorEngaged();
-		this.root.onLoaded = () => window.Tawk_API.onLoaded;
-		this.root.onBeforeLoaded = () => window.Tawk_API.onBeforeLoaded;
-		this.root.widgetPosition = () => window.Tawk_API.widgetPosition();
+		this.root.tawkGetWindowType = () => window.Tawk_API.getWindowType();
+		this.root.tawkGetStatus = () => window.Tawk_API.getStatus();
+		this.root.tawkIsChatMaximized = () => window.Tawk_API.isChatMaximized();
+		this.root.tawkIsChatMinimized = () => window.Tawk_API.isChatMinimized();
+		this.root.tawkIsChatHidden = () => window.Tawk_API.isChatHidden();
+		this.root.tawkIsChatOngoing = () => window.Tawk_API.isChatOngoing();
+		this.root.tawkIsVisitorEngaged = () => window.Tawk_API.isVisitorEngaged();
+		this.root.tawkOnLoaded = () => window.Tawk_API.onLoaded;
+		this.root.tawkOnBeforeLoaded = () => window.Tawk_API.onBeforeLoaded;
+		this.root.tawkWidgetPosition = () => window.Tawk_API.widgetPosition();
 	}
 
 	/**
@@ -97,83 +97,83 @@ class TawkMessenger {
 	 */
 	mapListeners() {
 		window.addEventListener('tawkLoad', () => {
-			this.root.$emit('load');
+			this.root.$emit('tawkLoad');
 		});
 
 		window.addEventListener('tawkStatusChange', (status) => {
-			this.root.$emit('statusChange', status.detail);
+			this.root.$emit('tawkStatusChange', status.detail);
 		});
 
 		window.addEventListener('tawkBeforeLoad', () => {
-			this.root.$emit('beforeLoad');
+			this.root.$emit('tawkBeforeLoad');
 		});
 
 		window.addEventListener('tawkChatMaximized', () => {
-			this.root.$emit('chatMaximized');
+			this.root.$emit('tawkChatMaximized');
 		});
 
 		window.addEventListener('tawkChatMinimized', () => {
-			this.root.$emit('chatMinimized');
+			this.root.$emit('tawkChatMinimized');
 		});
 
 		window.addEventListener('tawkChatHidden', () => {
-			this.root.$emit('chatHidden');
+			this.root.$emit('tawkChatHidden');
 		});
 
 		window.addEventListener('tawkChatStarted', () => {
-			this.root.$emit('chatStarted');
+			this.root.$emit('tawkChatStarted');
 		});
 
 		window.addEventListener('tawkChatEnded', () => {
-			this.root.$emit('chatEnded');
+			this.root.$emit('tawkChatEnded');
 		});
 
 		window.addEventListener('tawkPrechatSubmit', (data) => {
-			this.root.$emit('prechatSubmit', data.detail);
+			this.root.$emit('tawkPrechatSubmit', data.detail);
 		});
 
 		window.addEventListener('tawkOfflineSubmit', (data) => {
-			this.root.$emit('offlineSubmit', data.detail);
+			this.root.$emit('tawkOfflineSubmit', data.detail);
 		});
 		
 		window.addEventListener('tawkChatMessageVisitor', (message) => {
-			this.root.$emit('chatMessageVisitor', message.detail);
+			this.root.$emit('tawkChatMessageVisitor', message.detail);
 		});
 
 		window.addEventListener('tawkChatMessageAgent', (message) => {
-			this.root.$emit('chatMessageAgent', message.detail);
+			this.root.$emit('tawkChatMessageAgent', message.detail);
 		});
 
 		window.addEventListener('tawkChatMessageSystem', (message) => {
-			this.root.$emit('chatMessageSystem', message.detail);
+			this.root.$emit('tawkChatMessageSystem', message.detail);
 		});
 
 		window.addEventListener('tawkAgentJoinChat', (data) => {
-			this.root.$emit('agentJoinChat', data.detail);
+			this.root.$emit('tawkAgentJoinChat', data.detail);
 		});
 		
 		window.addEventListener('tawkAgentLeaveChat', (data) => {
-			this.root.$emit('agentLeaveChat', data.detail);
+			this.root.$emit('tawkAgentLeaveChat', data.detail);
 		});
 
 		window.addEventListener('tawkChatSatisfaction', (satisfaction) => {
-			this.root.$emit('chatSatisfaction', satisfaction.detail);
+			this.root.$emit('tawkChatSatisfaction', satisfaction.detail);
 		});
 		
 		window.addEventListener('tawkVisitorNameChanged', (visitorName) => {
-			this.root.$emit('visitorNameChanged', visitorName.detail);
+			this.root.$emit('tawkVisitorNameChanged', visitorName.detail);
 		});
 
 		window.addEventListener('tawkFileUpload', (link) => {
-			this.root.$emit('fileUpload', link.detail);
+			this.root.$emit('tawkFileUpload', link.detail);
 		});
 
 		window.addEventListener('tawkTagsUpdated', (data) => {
-			this.root.$emit('tagsUpdated', data.detail);
+			this.root.$emit('tawkTagsUpdated', data.detail);
 		});
 
 		window.addEventListener('tawkUnreadCountChanged', (data) => {
-			this.root.$emit('unreadCountChanged', data.detail);
+			this.root.$emit('tawkUnreadCountChanged', data.detail);
 		});
 	}
 
@@ -181,11 +181,11 @@ class TawkMessenger {
 	 * API for setting a data on the widget
 	 */
 	mapSetters() {
-		this.root.visitor = (data) => window.Tawk_API.visitor = data;
-		this.root.setAttributes = (attribute, callback) => window.Tawk_API.setAttributes(attribute, callback);
-		this.root.addEvent = (event, metadata, callback) => window.Tawk_API.addEvent(event, metadata, callback);
-		this.root.addTags = (tags, callback) => window.Tawk_API.addTags(tags, callback);
-		this.root.removeTags = (tags, callback) => window.Tawk_API.removeTags(tags, callback);
+		this.root.tawkVisitor = (data) => window.Tawk_API.visitor = data;
+		this.root.tawkSetAttributes = (attribute, callback) => window.Tawk_API.setAttributes(attribute, callback);
+		this.root.tawkAddEvent = (event, metadata, callback) => window.Tawk_API.addEvent(event, metadata, callback);
+		this.root.tawkAddTags = (tags, callback) => window.Tawk_API.addTags(tags, callback);
+		this.root.tawkRemoveTags = (tags, callback) => window.Tawk_API.removeTags(tags, callback);
 	}
 }
 
