@@ -57,6 +57,7 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
   - [addTags](#addtags)
   - [removeTags](#removetags)
   - [secureMode](#securemode)
+  - [switchWidget](#switchwidget)
   - [customstyle](#customstyle)
     - [zIndex](#zindex)
     - [Visibility](#visibility)
@@ -791,7 +792,22 @@ this.$tawkMessenger.visitor({
     name : 'Name',
     email : 'email@email.com',
     hash : '<calculate-hash>'
-})
+});
+```
+
+<br/>
+
+## switchWidget
+Disconnect the current widget connection, logout if it has existing user login and switch to
+another widget.
+
+```js
+this.$tawkMessenger.switchWidget({
+    propertyId : 'property_id',
+    widgetId : 'widget_id'
+}, function() {
+    // do something
+});
 ```
 
 <br/>
