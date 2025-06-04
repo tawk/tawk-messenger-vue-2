@@ -31,6 +31,9 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
   - [tagsUpdated](#tagsupdated)
   - [unreadCountChanged](#unreadcountchanged)
   - [visitor](#visitor)
+  - [autoStart](#autostart)
+  - [start](#start)
+  - [shutdown](#shutdown)
   - [maximize](#maximize)
   - [minimize](#minimize)
   - [toggle](#toggle)
@@ -293,6 +296,41 @@ this.$tawkMessenger.visitor({
     name : 'Name',
     email : 'email@email.com'
 });
+```
+
+<br/>
+
+## autoStart
+If set to true, it will auto-start the Tawk socket connection for chat services. If set to false,
+you will need to manually call the start API. It will not register and connect to the dashboard
+if this is set to false.
+
+```js
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-2';
+
+Vue.use(TawkMessengerVue, {
+    propertyId : 'property_id',
+    widgetId : 'widget_id',
+    autoStart : false
+});
+```
+
+<br/>
+
+## start
+Start the tawk socket connection.
+
+```js
+this.$tawkMessenger.start();
+```
+
+<br/>
+
+## shutdown
+End the tawk socket connection.
+
+```js
+this.$tawkMessenger.shutdown();
 ```
 
 <br/>
