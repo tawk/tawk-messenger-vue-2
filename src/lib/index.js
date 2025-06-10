@@ -181,11 +181,25 @@ class TawkMessenger {
 	 * API for setting a data on the widget
 	 */
 	mapSetters() {
-		this.root.tawkVisitor = (data) => window.Tawk_API.visitor = data;
-		this.root.tawkSetAttributes = (attribute, callback) => window.Tawk_API.setAttributes(attribute, callback);
-		this.root.tawkAddEvent = (event, metadata, callback) => window.Tawk_API.addEvent(event, metadata, callback);
-		this.root.tawkAddTags = (tags, callback) => window.Tawk_API.addTags(tags, callback);
-		this.root.tawkRemoveTags = (tags, callback) => window.Tawk_API.removeTags(tags, callback);
+		this.root.tawkVisitor = (data) => {
+			window.Tawk_API.visitor = data;
+		}
+
+		this.root.tawkSetAttributes = (attribute, callback) => {
+			window.Tawk_API.setAttributes(attribute, callback);
+		}
+
+		this.root.tawkAddEvent = (event, metadata, callback) => {
+			window.Tawk_API.addEvent(event, metadata, callback);
+		}
+		
+		this.root.tawkAddTags = (tags, callback) => {
+			window.Tawk_API.addTags(tags, callback);
+		}
+
+		this.root.tawkRemoveTags = (tags, callback) => {
+			window.Tawk_API.removeTags(tags, callback);
+		}
 	}
 }
 
