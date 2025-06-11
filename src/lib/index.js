@@ -17,6 +17,7 @@ class TawkMessenger {
 		this.propertyId = options.propertyId;
 		this.widgetId = options.widgetId;
 		this.embedId = options.embedId;
+		this.autoStart = options.autoStart;
 		this.customStyle = options.customStyle;
 		this.basePath = options.basePath;
 
@@ -41,7 +42,8 @@ class TawkMessenger {
 			propertyId : this.propertyId,
 			widgetId : this.widgetId,
 			embedId : this.embedId,
-			basePath : this.basePath
+			basePath : this.basePath,
+			autoStart : this.autoStart
 		});
 
 		this.init();
@@ -65,6 +67,8 @@ class TawkMessenger {
 	 * API for calling an action on the widget
 	 */
 	mapActions() {
+		this.root.tawkStart = () => window.Tawk_API.start();
+		this.root.tawkShutdown = () => window.Tawk_API.shutdown();
 		this.root.tawkMaximize = () => window.Tawk_API.maximize();
 		this.root.tawkMinimize = () => window.Tawk_API.minimize();
 		this.root.tawkToggle = () => window.Tawk_API.toggle();
@@ -199,6 +203,10 @@ class TawkMessenger {
 
 		this.root.tawkRemoveTags = (tags, callback) => {
 			window.Tawk_API.removeTags(tags, callback);
+		}
+
+		this.root.switchWidget = (data, callback) => {
+			window.Tawk_API.switchWidget(data, callback);
 		}
 	}
 }

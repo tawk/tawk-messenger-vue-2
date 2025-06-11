@@ -31,6 +31,9 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
   - [tawkTagsUpdated](#tawktagsupdated)
   - [tawkUnreadCountChanged](#tawkunreadcountchanged)
   - [tawkVisitor](#tawkvisitor)
+  - [autoStart](#autostart)
+  - [tawkStart](#tawkstart)
+  - [tawkShutdown](#tawkshutdown)
   - [tawkMaximize](#tawkmaximize)
   - [tawkMinimize](#tawkminimize)
   - [tawkToggle](#tawktoggle)
@@ -54,6 +57,7 @@ Use the JavaScript API to manipulate the chat widget displayed on your website.
   - [tawkAddTags](#tawkaddtags)
   - [tawkRemoveTags](#tawkremovetags)
   - [secureMode](#securemode)
+  - [switchWidget](#switchwidget)
   - [customstyle](#customstyle)
     - [zIndex](#zindex)
     - [Visibility](#visibility)
@@ -292,6 +296,41 @@ this.$tawkMessenger.tawkVisitor({
     name : 'Name',
     email : 'email@email.com'
 });
+```
+
+<br/>
+
+## autoStart
+If set to true, it will auto-start the Tawk socket connection for chat services. If set to false,
+you will need to manually call the start API. It will not register and connect to the dashboard
+if this is set to false.
+
+```js
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-2';
+
+Vue.use(TawkMessengerVue, {
+    propertyId : 'property_id',
+    widgetId : 'widget_id',
+    autoStart : false
+});
+```
+
+<br/>
+
+## tawkStart
+Start the tawk socket connection.
+
+```js
+this.$tawkMessenger.Start();
+```
+
+<br/>
+
+## tawkShutdown
+End the tawk socket connection.
+
+```js
+this.$tawkMessenger.tawkShutdown();
 ```
 
 <br/>
@@ -753,7 +792,22 @@ this.$tawkMessenger.tawkVisitor({
     name : 'Name',
     email : 'email@email.com',
     hash : '<calculate-hash>'
-})
+});
+```
+
+<br/>
+
+## switchWidget
+Disconnect the current widget connection, logout if it has existing user login and switch to
+another widget.
+
+```js
+this.$tawkMessenger.switchWidget({
+    propertyId : 'property_id',
+    widgetId : 'widget_id'
+}, function() {
+    // do something
+});
 ```
 
 <br/>
