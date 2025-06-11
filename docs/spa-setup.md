@@ -8,7 +8,7 @@ To access the API functions, call the **$tawkMessenger** anywhere in your compon
 the **tawk-messenger-vue-2** it will auto register the global scope.
 
 ```js
-this.$tawkMessenger.toggle();
+this.$tawkMessenger.tawkToggle();
 ```
 
 <br/>
@@ -18,7 +18,7 @@ You can listen on events emitted by the plugin, It must be exactly match the nam
 to that event, you can see the list of [events](api-reference.md) here.
 
 ```js
-this.$tawkMessenger.$on('load', () => {
+this.$tawkMessenger.$on('tawkLoad', () => {
     // place your code here
 });
 ```
