@@ -46,29 +46,29 @@ describe('Tawk-messenger plugin', () => {
 		it('Should set the action functions.', () => {
 			const wrapper = mountApp();
 
-			expect(typeof wrapper.vm.$tawkMessenger.maximize === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.minimize === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.toggle === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.popup === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.showWidget === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.hideWidget === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.toggleVisibility === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.endChat === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkMaximize === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkMinimize === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkToggle === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkPopup === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkShowWidget === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkHideWidget === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkToggleVisibility === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkEndChat === 'function').toBe(true);
 		});
 
 		it('Should set the getters functions.', () => {
 			const wrapper = mountApp();
 
-			expect(typeof wrapper.vm.$tawkMessenger.getWindowType === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.getStatus === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.isChatMaximized === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.isChatMinimized === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.isChatHidden === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.isChatOngoing === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.isVisitorEngaged === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.onLoaded === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.onBeforeLoaded === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.widgetPosition === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkGetWindowType === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkGetStatus === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkIsChatMaximized === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkIsChatMinimized === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkIsChatHidden === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkIsChatOngoing === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkIsVisitorEngaged === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkOnLoaded === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkOnBeforeLoaded === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkWidgetPosition === 'function').toBe(true);
 		});
 
 		it('Should set the event listeners.', () => {
@@ -99,11 +99,11 @@ describe('Tawk-messenger plugin', () => {
 		it('Should set the setter functions', () => {
 			const wrapper = mountApp();
 
-			expect(typeof wrapper.vm.$tawkMessenger.visitor === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.setAttributes === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.addEvent === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.addTags === 'function').toBe(true);
-			expect(typeof wrapper.vm.$tawkMessenger.removeTags === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkVisitor === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkSetAttributes === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkAddEvent === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkAddTags === 'function').toBe(true);
+			expect(typeof wrapper.vm.$tawkMessenger.tawkRemoveTags === 'function').toBe(true);
 		});
 	});
 });
